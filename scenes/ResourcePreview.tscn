@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgve73osetk0y"]
+
+[ext_resource type="Script" uid="uid://bruar1dhl6hkv" path="res://scripts/resource_preview.gd" id="1_5pi43"]
+[ext_resource type="Texture2D" uid="uid://f165lcx42het" path="res://assets/farmers/farmer_common.svg" id="2_w0wvw"]
+[ext_resource type="Texture2D" uid="uid://dved386sa5acq" path="res://assets/icons/denar.png" id="3_xim6y"]
+[ext_resource type="AudioStream" uid="uid://bbghscsojg5yu" path="res://assets/audio/pay.mp3" id="4_p2s8n"]
+
+[node name="ResourcePreview" type="Control"]
+custom_minimum_size = Vector2(585, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1359.0
+offset_bottom = -408.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5pi43")
+
+[node name="Preview" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 120.0
+offset_right = 700.0
+offset_bottom = 2070.0
+scale = Vector2(0.185, 0.185)
+texture = ExtResource("2_w0wvw")
+stretch_mode = 2
+
+[node name="BuyButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 520.0
+offset_right = 504.0
+offset_bottom = 592.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 50
+text = "Buy for PRICE "
+icon = ExtResource("3_xim6y")
+icon_alignment = 2
+expand_icon = true
+
+[node name="AmountLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 16.0
+offset_right = 443.0
+offset_bottom = 127.0
+theme_override_font_sizes/font_size = 81
+text = "0x"
+horizontal_alignment = 1
+
+[node name="PaySoundPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_p2s8n")
+
+[connection signal="pressed" from="BuyButton" to="." method="_on_buy_button_pressed"]

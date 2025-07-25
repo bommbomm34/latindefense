@@ -1,0 +1,120 @@
+[gd_scene load_steps=10 format=3 uid="uid://d1158a2ro4m8a"]
+
+[ext_resource type="Script" uid="uid://jut1x33l8iwp" path="res://scripts/home.gd" id="1_23ovu"]
+[ext_resource type="Theme" uid="uid://bl7glh8ic4a3a" path="res://assets/theme/theme.tres" id="1_ilu88"]
+[ext_resource type="Texture2D" uid="uid://bhk3n1jimgrc1" path="res://assets/icons/vocabs.png" id="3_svoro"]
+[ext_resource type="Texture2D" uid="uid://beowjrvsu68mo" path="res://assets/icons/weapons.svg" id="5_66mx0"]
+[ext_resource type="Texture2D" uid="uid://4icvlb83ibbx" path="res://assets/map/roman_empire.svg" id="6_23ovu"]
+[ext_resource type="Texture2D" uid="uid://xhhdy2snovf0" path="res://assets/icons/settings.svg" id="7_p3505"]
+[ext_resource type="Texture2D" uid="uid://bu313au8033lb" path="res://assets/icons/information.svg" id="8_fs62j"]
+[ext_resource type="Texture2D" uid="uid://tggu0pplkcn8" path="res://assets/metadata/logo.svg" id="9_fs62j"]
+[ext_resource type="PackedScene" uid="uid://dnjqber76fd1r" path="res://scenes/DenarView.tscn" id="11_mlk18"]
+
+[node name="Home" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_23ovu")
+
+[node name="AboutButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 912.0
+offset_top = 37.0
+offset_right = 1198.0
+offset_bottom = 169.0
+theme = ExtResource("1_ilu88")
+theme_override_font_sizes/font_size = 60
+text = "About"
+icon = ExtResource("8_fs62j")
+icon_alignment = 2
+expand_icon = true
+
+[node name="SettingsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1302.0
+offset_top = 37.0
+offset_right = 1767.0
+offset_bottom = 167.0
+theme = ExtResource("1_ilu88")
+theme_override_font_sizes/font_size = 60
+text = "Settings"
+icon = ExtResource("7_p3505")
+icon_alignment = 2
+expand_icon = true
+
+[node name="ResourcesButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1315.0
+offset_top = 453.0
+offset_right = 1822.0
+offset_bottom = 577.0
+theme = ExtResource("1_ilu88")
+theme_override_font_sizes/font_size = 60
+text = "Resources"
+icon = ExtResource("5_66mx0")
+icon_alignment = 2
+expand_icon = true
+
+[node name="MapButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1273.0
+offset_top = 885.0
+offset_right = 1810.0
+offset_bottom = 1049.0
+theme = ExtResource("1_ilu88")
+theme_override_font_sizes/font_size = 120
+text = "Map"
+icon = ExtResource("6_23ovu")
+icon_alignment = 2
+expand_icon = true
+
+[node name="VocabsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 853.0
+offset_right = 747.0
+offset_bottom = 1066.0
+theme = ExtResource("1_ilu88")
+theme_override_font_sizes/font_size = 120
+text = "Vocabs"
+icon = ExtResource("3_svoro")
+icon_alignment = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 67.0
+offset_top = 367.0
+offset_right = 732.0
+offset_bottom = 784.0
+theme = ExtResource("1_ilu88")
+theme_override_font_sizes/normal_font_size = 150
+bbcode_enabled = true
+text = "[color=#b3003e]Latin[/color] [color=#660066]Defense[/color]"
+
+[node name="Logo" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1007, 584)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_fs62j")
+
+[node name="DenarView" parent="." instance=ExtResource("11_mlk18")]
+layout_mode = 1
+offset_right = -1765.0
+
+[node name="SelfLifeLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 473.0
+offset_right = 773.0
+offset_bottom = 173.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+
+[connection signal="pressed" from="AboutButton" to="." method="_on_about_button_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="ResourcesButton" to="." method="_on_resources_button_pressed"]
+[connection signal="pressed" from="MapButton" to="." method="_on_map_button_pressed"]
+[connection signal="pressed" from="VocabsButton" to="." method="_on_vocabs_button_pressed"]

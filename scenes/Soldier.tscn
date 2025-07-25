@@ -1,0 +1,93 @@
+[gd_scene load_steps=7 format=3 uid="uid://be41yks5ibgqh"]
+
+[ext_resource type="Texture2D" uid="uid://b7fxnj5vx4bjr" path="res://assets/soldiers/soldier_common.svg" id="1_n37w4"]
+[ext_resource type="Script" uid="uid://d2flkgj18s2c0" path="res://scripts/soldier.gd" id="1_qtvpb"]
+[ext_resource type="Texture2D" uid="uid://c2j1nu5d06hsi" path="res://assets/weapons/bow_common.svg" id="3_tqf8n"]
+
+[sub_resource type="Animation" id="Animation_yiwc7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WeaponTexture:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(45, -39)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WeaponTexture:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_tqf8n"]
+resource_name = "soldier_sword_fight"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WeaponTexture:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.397901, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WeaponTexture:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(45, -39), Vector2(56, -36), Vector2(45, -39)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4lin3"]
+_data = {
+&"RESET": SubResource("Animation_yiwc7"),
+&"soldier_sword_fight": SubResource("Animation_tqf8n")
+}
+
+[node name="Soldier" type="Node2D"]
+script = ExtResource("1_qtvpb")
+
+[node name="Texture" type="Sprite2D" parent="."]
+position = Vector2(5, 2)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_n37w4")
+
+[node name="WeaponTexture" type="Sprite2D" parent="."]
+position = Vector2(45, -39)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("3_tqf8n")
+
+[node name="SFXPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_4lin3")
+}
+autoplay = "soldier_sword_fight"
+speed_scale = 1.5
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

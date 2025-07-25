@@ -1,0 +1,118 @@
+[gd_scene load_steps=16 format=3 uid="uid://cikvpi6hqjvmj"]
+
+[ext_resource type="Script" uid="uid://5lcoj5ajknys" path="res://addons/province/popup.gd" id="1_owb2l"]
+[ext_resource type="Script" uid="uid://dbap0gqox0ty1" path="res://addons/markdownlabel/markdownlabel.gd" id="1_txvoa"]
+[ext_resource type="Script" uid="uid://dcx7crs23nf4" path="res://addons/markdownlabel/header_formats/h1_format.gd" id="2_owb2l"]
+[ext_resource type="Script" uid="uid://d0sin64i4v3op" path="res://addons/markdownlabel/header_formats/h2_format.gd" id="3_gjoot"]
+[ext_resource type="Script" uid="uid://dlok0dv1tq2bf" path="res://addons/markdownlabel/header_formats/h3_format.gd" id="4_gkdsv"]
+[ext_resource type="Script" uid="uid://bayuh2vafablg" path="res://addons/markdownlabel/header_formats/h4_format.gd" id="5_l5ssn"]
+[ext_resource type="Script" uid="uid://dfr1w7u3jgni3" path="res://addons/markdownlabel/header_formats/h5_format.gd" id="6_0mnsp"]
+[ext_resource type="Script" uid="uid://bsi6dexoofpe6" path="res://addons/markdownlabel/header_formats/h6_format.gd" id="7_mny8k"]
+[ext_resource type="Texture2D" uid="uid://cwm1aouvknmvu" path="res://assets/icons/fight.svg" id="9_gjoot"]
+
+[sub_resource type="Resource" id="Resource_tahk8"]
+resource_local_to_scene = true
+script = ExtResource("2_owb2l")
+font_size = 2.285
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_wg8oe"]
+resource_local_to_scene = true
+script = ExtResource("3_gjoot")
+font_size = 1.714
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_oks3b"]
+resource_local_to_scene = true
+script = ExtResource("4_gkdsv")
+font_size = 1.428
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_ycxn4"]
+resource_local_to_scene = true
+script = ExtResource("5_l5ssn")
+font_size = 1.142
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_bgtdw"]
+resource_local_to_scene = true
+script = ExtResource("6_0mnsp")
+font_size = 1.0
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_ah24t"]
+resource_local_to_scene = true
+script = ExtResource("7_mny8k")
+font_size = 0.857
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
+
+[node name="Popup" type="Node2D"]
+visible = false
+script = ExtResource("1_owb2l")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 10
+offset_left = 1248.0
+offset_right = 1920.0
+offset_bottom = 350.0
+color = Color(0, 0, 0, 0.552941)
+
+[node name="MarkdownLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 671.0
+offset_bottom = 201.0
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[font_size=68]Province name[/font_size]
+[font_size=42]000 [img=40x40]res://assets/icons/denar.png[/img] 000 [img=40]res://assets/soldiers/soldier_common.svg[/img][/font_size]"
+horizontal_alignment = 1
+script = ExtResource("1_txvoa")
+markdown_text = "# Province name
+### 000 [img=40x40]res://assets/icons/denar.png[/img] 000 [img=40]res://assets/soldiers/soldier_common.svg[/img]"
+h1 = SubResource("Resource_tahk8")
+h2 = SubResource("Resource_wg8oe")
+h3 = SubResource("Resource_oks3b")
+h4 = SubResource("Resource_ycxn4")
+h5 = SubResource("Resource_bgtdw")
+h6 = SubResource("Resource_ah24t")
+metadata/_custom_type_script = "uid://dbap0gqox0ty1"
+
+[node name="FightButton" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 221.0
+offset_right = 537.0
+offset_bottom = 317.0
+theme_override_font_sizes/font_size = 70
+text = "Fight"
+icon = ExtResource("9_gjoot")
+icon_alignment = 2
+expand_icon = true
+
+[connection signal="pressed" from="ColorRect/FightButton" to="." method="_on_fight_button_pressed"]

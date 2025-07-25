@@ -1,0 +1,43 @@
+Sardinia et Corsica,2400,72
+Cilicia,5800,47
+Silicia,4700,28
+Narbonensis,8200,56
+Tarraconensis,13000,132
+Baetica,4900,50
+Lusitania,4700,73
+Aquitania,5500,76
+Lugdunensis,8400,92
+Britannia,6200,81
+Belgica,4400,60
+Germania inferior,2700,38
+Germania superior,3600,70
+Raetia,5500,42
+Noricum,4700,39
+Pannonia superior,3900,49
+Pannonia inferior,3200,52
+Dacia,5300,70
+Moesia inferior,7500,84
+Regnum bospori,6200,68
+Dalmatia,5400,68
+Moesia superior,4100,53
+Thracia,5200,38
+Macedonia,6900,41
+Epirus,2300,42
+Achaia,3300,64
+Asia,6300,66
+Galatia,4200,76
+Cappadocia,6900,108
+Bithynia et Pontus,5300,55
+Lycia et Pamphylia,3300,36
+Cyprus,2300,33
+Syria,3400,107
+Mesopotamia,11100,98
+Armenia,8600,85
+Assyria,5100,90
+Iudaea,2300,43
+Arabia petraea,4500,107
+Aegyptus,7900,88
+Cyrenaica et Creta,8500,54
+Africa proconsularis,5000,142
+Mauretania caesariensis,9000,39
+Mauretania tingitania,8900,70

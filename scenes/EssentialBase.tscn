@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3302b30ayxm1"]
+
+[ext_resource type="Script" uid="uid://d0yl6bndnn2yj" path="res://scripts/essential_base.gd" id="1_t6d8n"]
+[ext_resource type="AudioStream" uid="uid://bme8gt0kpqnr2" path="res://assets/audio/bgmusic_regular.mp3" id="2_t6d8n"]
+
+[node name="EssentialBase" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_t6d8n")
+
+[node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_t6d8n")
+autoplay = true
+
+[connection signal="finished" from="BackgroundMusicPlayer" to="." method="_on_bgmusic_finished"]

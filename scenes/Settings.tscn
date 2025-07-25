@@ -1,0 +1,152 @@
+[gd_scene load_steps=3 format=3 uid="uid://dufl5y0k2rh6x"]
+
+[ext_resource type="Script" uid="uid://bswpugg1ip0tt" path="res://scripts/settings.gd" id="1_rbmmp"]
+[ext_resource type="PackedScene" uid="uid://dsckvvmxhdqcw" path="res://scenes/Base.tscn" id="2_i47rn"]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 8.0
+offset_right = -32.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rbmmp")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 120
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="Base" parent="." instance=ExtResource("2_i47rn")]
+layout_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+clip_contents = false
+layout_mode = 0
+offset_left = 64.0
+offset_top = 248.0
+offset_right = 1856.0
+offset_bottom = 872.0
+
+[node name="Settings" type="HBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 120
+
+[node name="Volume" type="VBoxContainer" parent="ScrollContainer/Settings"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="VolumeTitle" type="Label" parent="ScrollContainer/Settings/Volume"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Volume"
+horizontal_alignment = 1
+
+[node name="MusicLabel" type="Label" parent="ScrollContainer/Settings/Volume"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Music"
+horizontal_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="ScrollContainer/Settings/Volume"]
+custom_minimum_size = Vector2(0, -142)
+layout_mode = 2
+value = 100.0
+scrollable = false
+
+[node name="SFXLabel" type="Label" parent="ScrollContainer/Settings/Volume"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "SFX"
+horizontal_alignment = 1
+
+[node name="SFXSlider" type="HSlider" parent="ScrollContainer/Settings/Volume"]
+layout_mode = 2
+value = 100.0
+scrollable = false
+
+[node name="Theme" type="VBoxContainer" parent="ScrollContainer/Settings"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="ThemeTitle" type="Label" parent="ScrollContainer/Settings/Theme"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Theme"
+horizontal_alignment = 1
+
+[node name="BackgroundColorLabel" type="Label" parent="ScrollContainer/Settings/Theme"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Background Color"
+horizontal_alignment = 1
+
+[node name="ColorPicker" type="ColorPicker" parent="ScrollContainer/Settings/Theme"]
+layout_mode = 2
+sampler_visible = false
+color_modes_visible = false
+sliders_visible = false
+hex_visible = false
+presets_visible = false
+
+[node name="Language" type="VBoxContainer" parent="ScrollContainer/Settings"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Language" type="Label" parent="ScrollContainer/Settings/Language"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Language"
+horizontal_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="ScrollContainer/Settings/Language"]
+layout_mode = 2
+selected = 0
+item_count = 4
+popup/item_0/text = "Automatic"
+popup/item_0/id = 2
+popup/item_1/text = "German"
+popup/item_1/id = 0
+popup/item_2/text = "English"
+popup/item_2/id = 1
+popup/item_3/text = "Türkçe"
+popup/item_3/id = 3
+
+[node name="Reset" type="VBoxContainer" parent="ScrollContainer/Settings"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Reset" type="Label" parent="ScrollContainer/Settings/Reset"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Reset"
+horizontal_alignment = 1
+
+[node name="Warning" type="Label" parent="ScrollContainer/Settings/Reset"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 30
+text = "If you click on Reset, 
+your game data will
+be deleted indefinetely!"
+horizontal_alignment = 1
+
+[node name="ResetButton" type="Button" parent="ScrollContainer/Settings/Reset"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Reset"
+
+[connection signal="drag_ended" from="ScrollContainer/Settings/Volume/MusicSlider" to="." method="_on_music_slider_drag_ended"]
+[connection signal="drag_ended" from="ScrollContainer/Settings/Volume/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
+[connection signal="color_changed" from="ScrollContainer/Settings/Theme/ColorPicker" to="." method="_on_color_picker_color_changed"]
+[connection signal="item_selected" from="ScrollContainer/Settings/Language/OptionButton" to="." method="_on_language_selected"]
+[connection signal="pressed" from="ScrollContainer/Settings/Reset/ResetButton" to="." method="_on_reset_button_pressed"]

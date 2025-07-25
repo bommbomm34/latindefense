@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnjqber76fd1r"]
+
+[ext_resource type="Theme" uid="uid://bl7glh8ic4a3a" path="res://assets/theme/theme.tres" id="1_3sf65"]
+[ext_resource type="Script" uid="uid://uh3d4ickpp4j" path="res://scripts/denar_view.gd" id="1_n7qpk"]
+
+[node name="DenarView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1160.0
+offset_bottom = -960.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n7qpk")
+
+[node name="InfoLabel" type="RichTextLabel" parent="."]
+z_index = -5
+layout_mode = 0
+offset_left = 12.0
+offset_right = 736.0
+offset_bottom = 112.0
+theme = ExtResource("1_3sf65")
+bbcode_enabled = true
+text = " [img=80x80]res://assets/icons/denar.png[/img]
+"

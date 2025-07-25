@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="58mm"
+   height="58mm"
+   viewBox="0 0 58 58"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   sodipodi:docname="denar.svg"
+   inkscape:export-filename="denar.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.1527637"
+     inkscape:cx="-41.639063"
+     inkscape:cy="148.7729"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient1"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#463d3b;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+      <stop
+         style="stop-color:#c5bebb;stop-opacity:1;"
+         offset="1"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1"
+       id="linearGradient2"
+       x1="97.875946"
+       y1="166.19086"
+       x2="158.87595"
+       y2="166.19086"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-99.375946,-137.19086)">
+    <circle
+       style="fill:url(#linearGradient2);fill-opacity:1;stroke:#2e2e2e;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       id="path1"
+       cx="128.37595"
+       cy="166.19086"
+       r="28" />
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:53.4477px;font-family:Cinzel;-inkscape-font-specification:'Cinzel Bold';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#c3c3c3;fill-opacity:1;stroke:#2e2e2e;stroke-width:0.8;stroke-dasharray:none;stroke-opacity:1"
+       x="108.76237"
+       y="184.46579"
+       id="text2"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         style="fill:#c3c3c3;fill-opacity:1;stroke-width:0.8;stroke-dasharray:none;stroke:#2e2e2e;stroke-opacity:1"
+         x="108.76237"
+         y="184.46579">D</tspan></text>
+  </g>
+</svg>

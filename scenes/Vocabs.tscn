@@ -1,0 +1,92 @@
+[gd_scene load_steps=3 format=3 uid="uid://7cvivtm8esg1"]
+
+[ext_resource type="Script" uid="uid://b25d5u6bhwdhd" path="res://scripts/vocabs.gd" id="1_fi8gj"]
+[ext_resource type="PackedScene" uid="uid://dsckvvmxhdqcw" path="res://scenes/Base.tscn" id="1_own8k"]
+
+[node name="Vocabs" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fi8gj")
+
+[node name="SourceWord" type="Label" parent="."]
+layout_mode = 0
+offset_top = 136.0
+offset_right = 1918.0
+offset_bottom = 299.0
+theme_override_font_sizes/font_size = 120
+text = "dominus"
+horizontal_alignment = 1
+
+[node name="Feedback" type="Label" parent="."]
+layout_mode = 0
+offset_top = 896.0
+offset_right = 1918.0
+offset_bottom = 1059.0
+theme_override_font_sizes/font_size = 120
+horizontal_alignment = 1
+
+[node name="Instruction" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 184.0
+offset_right = 1920.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 60
+text = "Click on the correct translation of the word."
+horizontal_alignment = 1
+
+[node name="Option1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 400.0
+offset_right = 863.0
+offset_bottom = 563.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 120
+text = "landlord"
+
+[node name="Option2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1056.0
+offset_top = 400.0
+offset_right = 1815.0
+offset_bottom = 563.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 120
+text = "leader"
+
+[node name="Option3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 664.0
+offset_right = 863.0
+offset_bottom = 827.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 120
+text = "lord"
+
+[node name="Option4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1056.0
+offset_top = 664.0
+offset_right = 1815.0
+offset_bottom = 827.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 120
+text = "father"
+
+[node name="Base" parent="." instance=ExtResource("1_own8k")]
+layout_mode = 1
+
+[connection signal="pressed" from="Option1" to="." method="_on_option_1_pressed"]
+[connection signal="pressed" from="Option2" to="." method="_on_option_2_pressed"]
+[connection signal="pressed" from="Option3" to="." method="_on_option_3_pressed"]
+[connection signal="pressed" from="Option4" to="." method="_on_option_4_pressed"]

@@ -1,0 +1,153 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw6tw1jnee086"]
+
+[ext_resource type="Script" uid="uid://bmdopifxfakxk" path="res://scripts/game.gd" id="1_ibkli"]
+[ext_resource type="PackedScene" uid="uid://dsckvvmxhdqcw" path="res://scenes/Base.tscn" id="2_qbsmt"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_ibkli")
+
+[node name="Soldiers" type="Node2D" parent="."]
+
+[node name="SelfLifeLabel" type="Label" parent="."]
+offset_left = 17.0
+offset_top = 923.0
+offset_right = 317.0
+offset_bottom = 1096.0
+theme_override_font_sizes/font_size = 128
+
+[node name="SoldierCommonAmountLabel" type="Label" parent="."]
+offset_left = 29.0
+offset_top = 17.0
+offset_right = 176.0
+offset_bottom = 99.0
+theme_override_font_sizes/font_size = 60
+
+[node name="TotalEnemyAmount" type="Label" parent="."]
+offset_left = 1713.0
+offset_top = 9.0
+offset_right = 1895.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 2
+
+[node name="SoldierRareAmountLabel" type="Label" parent="."]
+offset_left = 174.0
+offset_top = 17.0
+offset_right = 321.0
+offset_bottom = 99.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 60
+
+[node name="SoldierLegendaryAmountLabel" type="Label" parent="."]
+offset_left = 314.0
+offset_top = 17.0
+offset_right = 461.0
+offset_bottom = 99.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 60
+
+[node name="MultiplierLabel" type="Label" parent="."]
+offset_left = 503.0
+offset_top = 17.0
+offset_right = 1515.0
+offset_bottom = 99.0
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+
+[node name="EnemyLifeLabel" type="Label" parent="."]
+offset_left = 1580.0
+offset_top = 917.0
+offset_right = 1880.0
+offset_bottom = 1090.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 128
+horizontal_alignment = 2
+
+[node name="Menu" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 701.0
+offset_top = 371.0
+offset_right = 1257.0
+offset_bottom = 638.0
+
+[node name="ColorRect" type="ColorRect" parent="Menu"]
+layout_mode = 0
+offset_left = -72.0
+offset_top = -105.0
+offset_right = 678.0
+offset_bottom = 281.0
+color = Color(0.301961, 0.301961, 0.301961, 0.847059)
+
+[node name="BackToHomeButton" type="Button" parent="Menu"]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 44.0
+offset_right = 116.0
+offset_bottom = 84.0
+theme_override_font_sizes/font_size = 60
+text = "Back to Home"
+
+[node name="PlayAgainButton" type="Button" parent="Menu"]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 160.0
+offset_right = 523.0
+offset_bottom = 242.0
+theme_override_font_sizes/font_size = 60
+text = "Play again"
+
+[node name="ResultLabel" type="RichTextLabel" parent="Menu"]
+layout_mode = 0
+offset_left = -153.0
+offset_top = -91.0
+offset_right = 750.0
+offset_bottom = 21.0
+bbcode_enabled = true
+text = "Won"
+horizontal_alignment = 1
+
+[node name="TotalEnemyLifeLabel" type="Label" parent="Menu"]
+layout_mode = 0
+offset_left = 1013.0
+offset_top = 490.0
+offset_right = 1163.0
+offset_bottom = 577.0
+theme_override_colors/font_color = Color(1, 0.635294, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "1000"
+horizontal_alignment = 2
+
+[node name="TotalSelfLifeLabel" type="Label" parent="Menu"]
+layout_mode = 0
+offset_left = -678.0
+offset_top = 490.0
+offset_right = -528.0
+offset_bottom = 577.0
+theme_override_colors/font_color = Color(1, 0.635294, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "1000"
+horizontal_alignment = 2
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[node name="Base" parent="." instance=ExtResource("2_qbsmt")]
+visible = false
+
+[node name="FightAgainstLabel" type="Label" parent="."]
+offset_left = 5.0
+offset_top = 989.0
+offset_right = 1920.0
+offset_bottom = 1076.0
+theme_override_colors/font_color = Color(0.244776, 0.244776, 0.244776, 1)
+theme_override_font_sizes/font_size = 64
+text = "FIGHT_AGAINST"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Menu/BackToHomeButton" to="." method="_on_back_to_home_button_pressed"]
+[connection signal="pressed" from="Menu/PlayAgainButton" to="." method="_on_play_again_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="spawn_enemy"]

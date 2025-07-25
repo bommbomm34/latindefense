@@ -1,0 +1,54 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Latin Defense"
+config/description="You are the leader of your Roman Empire, but it's small. Expand your empire to get more might. Get resources, farmers, coins, soldiers and weapons to expand your empire, but keep in mind: Other empires will fight against you. You need to defend your empire! You gain rewards by learning Latin vocabs. It is a Learn-to-Progress Game!"
+config/version="0.1"
+run/main_scene="uid://d1158a2ro4m8a"
+config/features=PackedStringArray("4.4", "GL Compatibility")
+boot_splash/bg_color=Color(0.0101923, 0.393325, 0.384355, 1)
+boot_splash/use_filter=false
+boot_splash/image="uid://dxlf558i2s1id"
+config/icon="uid://dxlf558i2s1id"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
+
+[editor]
+
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/markdownlabel/plugin.cfg", "res://addons/province/plugin.cfg")
+
+[gui]
+
+theme/custom="uid://bl7glh8ic4a3a"
+theme/custom_font="uid://43pnamjv37vy"
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://assets/localization/localization.de.translation", "res://assets/localization/localization.tr.translation")
+locale/test="en"
+locale/locale_filter_mode=0
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0.542296, 0.55212, 0.624421, 1)
