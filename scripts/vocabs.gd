@@ -76,7 +76,10 @@ func end():
 	$Option3.disabled = true
 	$Option4.disabled = true
 	$SourceWord.text = ""
-	$Feedback.text = "No vocabs left"
+	$Feedback.text = "No vocabs left. Restarting."
+	await get_tree().create_timer(3.0).timeout
+	Database.set_value("vocabs_position", 0)
+	read_vocabs_line()
 
 func clear_later():
 	await get_tree().create_timer(3.0).timeout
