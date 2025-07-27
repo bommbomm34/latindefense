@@ -14,7 +14,7 @@ The versions of the vocabs in other languages are automatically translated from 
 The game uses the MarkdownLabel plugin (https://godotengine.org/asset-library/asset/2302) by daenvil (https://godotengine.org/asset-library/asset?user=daenvil).
 This game uses Godot Engine. See this page (https://godotengine.org/license/) or GODOT_COPYRIGHT.txt for more information about the licensing of the game engine.
 
-The game itself (without the assets and the engine named above) is licensed under the following license:
+The game itself (without the assets, plugin and the engine named above) is licensed under the following license:
 
 ----- BEGIN OF LICENSE -----
 
