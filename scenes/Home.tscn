@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d1158a2ro4m8a"]
+[gd_scene load_steps=23 format=3 uid="uid://d1158a2ro4m8a"]
 
 [ext_resource type="Script" uid="uid://jut1x33l8iwp" path="res://scripts/home.gd" id="1_23ovu"]
 [ext_resource type="Theme" uid="uid://bl7glh8ic4a3a" path="res://assets/theme/theme.tres" id="1_ilu88"]
@@ -8,7 +8,74 @@
 [ext_resource type="Texture2D" uid="uid://xhhdy2snovf0" path="res://assets/icons/settings.svg" id="7_p3505"]
 [ext_resource type="Texture2D" uid="uid://bu313au8033lb" path="res://assets/icons/information.svg" id="8_fs62j"]
 [ext_resource type="Texture2D" uid="uid://tggu0pplkcn8" path="res://assets/metadata/logo.svg" id="9_fs62j"]
+[ext_resource type="Script" uid="uid://dbap0gqox0ty1" path="res://addons/markdownlabel/markdownlabel.gd" id="10_n4517"]
 [ext_resource type="PackedScene" uid="uid://dnjqber76fd1r" path="res://scenes/DenarView.tscn" id="11_mlk18"]
+[ext_resource type="Script" uid="uid://dcx7crs23nf4" path="res://addons/markdownlabel/header_formats/h1_format.gd" id="11_x0wfn"]
+[ext_resource type="Script" uid="uid://d0sin64i4v3op" path="res://addons/markdownlabel/header_formats/h2_format.gd" id="12_va03u"]
+[ext_resource type="Script" uid="uid://dlok0dv1tq2bf" path="res://addons/markdownlabel/header_formats/h3_format.gd" id="13_biiq1"]
+[ext_resource type="Script" uid="uid://bayuh2vafablg" path="res://addons/markdownlabel/header_formats/h4_format.gd" id="14_6g2ad"]
+[ext_resource type="Script" uid="uid://dfr1w7u3jgni3" path="res://addons/markdownlabel/header_formats/h5_format.gd" id="15_rpj2a"]
+[ext_resource type="Script" uid="uid://bsi6dexoofpe6" path="res://addons/markdownlabel/header_formats/h6_format.gd" id="16_i1qc7"]
+
+[sub_resource type="Resource" id="Resource_r1riy"]
+resource_local_to_scene = true
+script = ExtResource("11_x0wfn")
+font_size = 2.285
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_88yq0"]
+resource_local_to_scene = true
+script = ExtResource("12_va03u")
+font_size = 1.714
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_dct4q"]
+resource_local_to_scene = true
+script = ExtResource("13_biiq1")
+font_size = 1.428
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_k40ht"]
+resource_local_to_scene = true
+script = ExtResource("14_6g2ad")
+font_size = 1.142
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_w1b7w"]
+resource_local_to_scene = true
+script = ExtResource("15_rpj2a")
+font_size = 1.0
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_n1rrq"]
+resource_local_to_scene = true
+script = ExtResource("16_i1qc7")
+font_size = 0.857
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
 
 [node name="Home" type="Control"]
 layout_mode = 3
@@ -29,6 +96,19 @@ theme = ExtResource("1_ilu88")
 theme_override_font_sizes/font_size = 60
 text = "About"
 icon = ExtResource("8_fs62j")
+icon_alignment = 2
+expand_icon = true
+
+[node name="HelpButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 935.0
+offset_top = 875.0
+offset_right = 1104.0
+offset_bottom = 1048.0
+theme = ExtResource("1_ilu88")
+theme_override_font_sizes/font_size = 128
+toggle_mode = true
+text = "?"
 icon_alignment = 2
 expand_icon = true
 
@@ -113,7 +193,124 @@ offset_bottom = 173.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 100
 
+[node name="Help" type="RichTextLabel" parent="."]
+visible = false
+layout_mode = 0
+offset_top = 235.0
+offset_right = 1227.0
+offset_bottom = 810.0
+theme_override_font_sizes/bold_italics_font_size = 1
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+bbcode_enabled = true
+text = "[font_size=73]Help[/font_size]
+
+[font_size=54]Home[/font_size]
+
+You can see your total life in red and the your denar on the top side.
+
+[table=2]
+[cell]Button[/cell][cell]Function[/cell]
+[cell]About[/cell][cell]See the credits and the license[/cell]
+[cell]Settings[/cell][cell]Edit the game settings[/cell]
+[cell]Resources[/cell][cell]Buy new soldiers and farmers[/cell]
+[cell]Vocabs[/cell][cell]Learn new vocabs[/cell]
+[cell]Map[/cell][cell]Choose a province to fight[/cell]
+[/table]
+
+[font_size=54]Game concept[/font_size]
+
+You have soldiers and farmers. Soldiers and farmers have a rarity which can be [i]common, rare or legendary[/i]. Better rarity means a better soldier or farmer, but those are more expensive. You pay with denar in the game. You lose denar, if you lose in a fight against a province. You win denar, if you win a fight. If it is DRAWN, then nobody wins anything. Farmers are multipliers for your rewards in fights. You can also earn (or lose) denar in Vocabs by learning vocabs. If you don't click the right translation, you lose denar. Otherwise, you win denar.
+
+[font_size=54]About[/font_size]
+
+You can see the credits and the license of the game. It is basically a richtext clone of LICENSE.txt in the source code.
+
+[font_size=54]Settings[/font_size]
+
+You can change your music and sound effect (SFX) volume. You can also change the background color and the language. There is also a RESET button to reset your savegame.
+
+[font_size=54]Resources[/font_size]
+
+You can buy here soldiers and farmers. Rarer soldiers and farmers are more expensive than the common ones. Soldiers are more expensive than farmers. You can see the amount of rarity of soldiers and farmers you own over the related soldier or farmer.
+
+[font_size=54]Vocabs[/font_size]
+
+You become four options to select. The options will be in your selected language (or English, if your language is not available). You also see a latin word over the options. You need to click on the right translation. If you get it right, denar will be added, otherwise, you lose denar. You can see the feedback (RIGHT or WRONG) under the options. The game has totally 2810 vocabs. Your vocab state will be resetted, if you change the language or finish the vocabs. 
+
+[b]WARNING: The vocabs of German and Turkish are translated automatically. The translations could be wrong. If you see translation mistakes, please open an issue. Translations in other languages then English could be longer than the English ones. The translated word will be shortened with a dot if it exceeds the maximum word size. Sometimes, your clicked option can be true, but the game can it recognize as false. This can be, because the vocabs were automatically generated. The vocabs are provided WITHOUT ANY KIND OF WARRANTY.[/b]
+
+[font_size=54]Map[/font_size]
+
+Select the province, you want to fight against. You can only fight against provinces, if they are your neighbors. If you click one of them, you see the number of soldiers it has and the amount of denar it has. You will get the denar, if you invade the province. You also see the life in red. The default life is 7000. Click on FIGHT to fight against the selected province!
+
+[font_size=54]Gameplay[/font_size]
+
+If you are in the game, you see your temporary life in the bottom left of the game. The temporary life of the enemy is in the bottom right of the game. If the temporary life gets reduced, the total life gets also reduced by the same amount. You can see your total life after the fight over the temporary life labels. During the fight, you can click to spawn soldiers in that height (it will be rounded). Sometimes, you can't because of cheat protection. The enemy spawns soldiers automatically. You can see the amount of the rarities of the remaining soldiers you have on the top left side. You can also see the amount of all remaining soldiers the enemy has on the top right side. The soldiers will fight each other if they are near to each other. If a soldier reaches the other side, the other side loses life. If your total life is under 1 after the fight, the enemy's life gets 7000 and yours also, but you lose lots of denar. On the other side, if the enemy's total life is under 1, you invaded the enemy and you get its denars and its ownership.
+[b]Thanks for playing this game![/b]
+
+
+"
+script = ExtResource("10_n4517")
+markdown_text = "# Help
+
+## Home
+
+You can see your total life in red and the your denar on the top side.
+
+| Button    | Function                        |
+| --------- | ------------------------------- |
+| About     | See the credits and the license |
+| Settings  | Edit the game settings          |
+| Resources | Buy new soldiers and farmers    |
+| Vocabs    | Learn new vocabs                |
+| Map       | Choose a province to fight      |
+
+## Game concept
+
+You have soldiers and farmers. Soldiers and farmers have a rarity which can be *common, rare or legendary*. Better rarity means a better soldier or farmer, but those are more expensive. You pay with denar in the game. You lose denar, if you lose in a fight against a province. You win denar, if you win a fight. If it is DRAWN, then nobody wins anything. Farmers are multipliers for your rewards in fights. You can also earn (or lose) denar in Vocabs by learning vocabs. If you don't click the right translation, you lose denar. Otherwise, you win denar.
+
+## About
+
+You can see the credits and the license of the game. It is basically a richtext clone of LICENSE.txt in the source code.
+
+## Settings
+
+You can change your music and sound effect (SFX) volume. You can also change the background color and the language. There is also a RESET button to reset your savegame.
+
+## Resources
+
+You can buy here soldiers and farmers. Rarer soldiers and farmers are more expensive than the common ones. Soldiers are more expensive than farmers. You can see the amount of rarity of soldiers and farmers you own over the related soldier or farmer.
+
+## Vocabs
+
+You become four options to select. The options will be in your selected language (or English, if your language is not available). You also see a latin word over the options. You need to click on the right translation. If you get it right, denar will be added, otherwise, you lose denar. You can see the feedback (RIGHT or WRONG) under the options. The game has totally 2810 vocabs. Your vocab state will be resetted, if you change the language or finish the vocabs. 
+
+**WARNING: The vocabs of German and Turkish are translated automatically. The translations could be wrong. If you see translation mistakes, please open an issue. Translations in other languages then English could be longer than the English ones. The translated word will be shortened with a dot if it exceeds the maximum word size. Sometimes, your clicked option can be true, but the game can it recognize as false. This can be, because the vocabs were automatically generated. The vocabs are provided WITHOUT ANY KIND OF WARRANTY.**
+
+## Map
+
+Select the province, you want to fight against. You can only fight against provinces, if they are your neighbors. If you click one of them, you see the number of soldiers it has and the amount of denar it has. You will get the denar, if you invade the province. You also see the life in red. The default life is 7000. Click on FIGHT to fight against the selected province!
+
+## Gameplay
+
+If you are in the game, you see your temporary life in the bottom left of the game. The temporary life of the enemy is in the bottom right of the game. If the temporary life gets reduced, the total life gets also reduced by the same amount. You can see your total life after the fight over the temporary life labels. During the fight, you can click to spawn soldiers in that height (it will be rounded). Sometimes, you can't because of cheat protection. The enemy spawns soldiers automatically. You can see the amount of the rarities of the remaining soldiers you have on the top left side. You can also see the amount of all remaining soldiers the enemy has on the top right side. The soldiers will fight each other if they are near to each other. If a soldier reaches the other side, the other side loses life. If your total life is under 1 after the fight, the enemy's life gets 7000 and yours also, but you lose lots of denar. On the other side, if the enemy's total life is under 1, you invaded the enemy and you get its denars and its ownership.
+**Thanks for playing this game!**
+
+
+"
+h1 = SubResource("Resource_r1riy")
+h2 = SubResource("Resource_88yq0")
+h3 = SubResource("Resource_dct4q")
+h4 = SubResource("Resource_k40ht")
+h5 = SubResource("Resource_w1b7w")
+h6 = SubResource("Resource_n1rrq")
+metadata/_custom_type_script = "uid://dbap0gqox0ty1"
+
 [connection signal="pressed" from="AboutButton" to="." method="_on_about_button_pressed"]
+[connection signal="toggled" from="HelpButton" to="." method="_on_help_button_toggled"]
 [connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="ResourcesButton" to="." method="_on_resources_button_pressed"]
 [connection signal="pressed" from="MapButton" to="." method="_on_map_button_pressed"]

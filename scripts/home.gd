@@ -47,3 +47,6 @@ func set_language():
 		TranslationServer.set_locale(OS.get_locale_language())
 	else:
 		TranslationServer.set_locale(lang)
+
+func _on_help_button_toggled(toggled_on: bool) -> void:
+	$Help.visible = toggled_on
