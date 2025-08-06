@@ -1,7 +1,7 @@
 extends Control
 
-const bgmusic_war_resource_path = "res://assets/audio/bgmusic_war.mp3"
-const bgmusic_regular_resource_path = "res://assets/audio/bgmusic_regular.mp3"
+const bgmusic_war_resource_path = "res://assets/audio/bgmusic_war.wav"
+const bgmusic_regular_resource_path = "res://assets/audio/bgmusic_regular.ogg"
 @onready var bgmusic_war_stream = preload(bgmusic_war_resource_path)
 @onready var bgmusic_regular_stream = preload(bgmusic_regular_resource_path)
 

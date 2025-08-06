@@ -14,7 +14,6 @@ func init(given_resource_name: String, resource_image: Texture2D, common_price: 
 	$BuyButton.text = tr("Buy for ") + str(price)
 	amount = Database.get_value(resource_name + "_amount", 0)
 	$AmountLabel.text = str(amount) + "x"
-	$PaySoundPlayer.volume_linear = Database.get_value("sfx_volume", 100) / 100.0
 	if Database.get_value("denar", 0) < price:
 		$BuyButton.disabled = true
 
@@ -23,7 +22,6 @@ func reload():
 
 func _on_buy_button_pressed() -> void:
 	if Database.get_value("denar", 0) >= price:
-		$PaySoundPlayer.play()
 		Database.set_value(resource_name + "_amount", amount + 1)
 		Database.set_value("denar", Database.get_value("denar", 0) - price)
 		get_parent().get_parent().get_parent().reload()

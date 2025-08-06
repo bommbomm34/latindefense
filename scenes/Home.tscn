@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://d1158a2ro4m8a"]
+[gd_scene load_steps=24 format=3 uid="uid://d1158a2ro4m8a"]
 
 [ext_resource type="Script" uid="uid://jut1x33l8iwp" path="res://scripts/home.gd" id="1_23ovu"]
 [ext_resource type="Theme" uid="uid://bl7glh8ic4a3a" path="res://assets/theme/theme.tres" id="1_ilu88"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://beowjrvsu68mo" path="res://assets/icons/weapons.svg" id="5_66mx0"]
 [ext_resource type="Texture2D" uid="uid://4icvlb83ibbx" path="res://assets/map/roman_empire.svg" id="6_23ovu"]
 [ext_resource type="Texture2D" uid="uid://xhhdy2snovf0" path="res://assets/icons/settings.svg" id="7_p3505"]
+[ext_resource type="Script" uid="uid://dy1l4jk5oe0rp" path="res://scripts/database.gd" id="7_x0wfn"]
 [ext_resource type="Texture2D" uid="uid://bu313au8033lb" path="res://assets/icons/information.svg" id="8_fs62j"]
 [ext_resource type="Texture2D" uid="uid://tggu0pplkcn8" path="res://assets/metadata/logo.svg" id="9_fs62j"]
 [ext_resource type="Script" uid="uid://dbap0gqox0ty1" path="res://addons/markdownlabel/markdownlabel.gd" id="10_n4517"]
@@ -150,6 +151,7 @@ text = "Map"
 icon = ExtResource("6_23ovu")
 icon_alignment = 2
 expand_icon = true
+script = ExtResource("7_x0wfn")
 
 [node name="VocabsButton" type="Button" parent="."]
 layout_mode = 0

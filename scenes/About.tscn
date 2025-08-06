@@ -29,10 +29,9 @@ theme_override_fonts/italics_font = ExtResource("2_gpaav")
 theme_override_font_sizes/italics_font_size = 30
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
-text = "Background music in the \"Fight\" scene by [url=https://pixabay.com/users/hitslab-47305729/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=372155]Ievgen Poltavskyi[/url] from [url=https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=372155]Pixabay[/url]
-Background music in the other scenes by [url=https://pixabay.com/users/sonican-38947841/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=361962]Dvir Silverstone[/url] from [url=https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=361962]Pixabay[/url]
-Pay sound (for resources) by [url=https://pixabay.com/users/dragon-studio-38165424/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=376867]DRAGON-STUDIO[/url] from [url=https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=376867]Pixabay[/url]
-Sword hit sound (in the Game scene) by [url=https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=7160]freesound_community[/url] from [url=https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=7160]Pixabay[/url]
+text = "Background music (in scenes other than the Fight scene) provided by [url=https://opengameart.org/users/alexandr-zhelanov]Alexandr Zhelanov[/url] on [url=https://opengameart.org/content/ancient-temple]this OpenGameArt page[/url].
+Background music (in the fight scene) provided by [url=https://opengameart.org/users/subspaceaudio]SubspaceAudio[/url] on [url=https://opengameart.org/content/boss-battle-music]this OpenGameArt page[/url].
+Sword hit sound provided by [url=https://opengameart.org/users/bmaczero]BMacZero[/url] on [url=https://opengameart.org/content/metal-impact-sounds]this OpenGameArt page[/url].
 
 This project is not particularly supported by the creators listed above.
 
@@ -48,7 +47,7 @@ This game uses Godot Engine. See [url=https://godotengine.org/license/]this page
 
 The game itself (without the assets, plugin and the engine named above) is licensed under the following license:
 
------ BEGIN OF LICENSE -----
+----- BEGIN OF GAME LICENSE -----
 [i]
 Copyright (c) 2025 bommbomm34.
 
@@ -70,7 +69,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 [/i]
------ END OF LICENSE -----
+----- END OF GAME LICENSE -----
 "
 selection_enabled = true
 

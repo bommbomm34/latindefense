@@ -28,7 +28,7 @@ func init(given_enemy: bool, given_rarity: int, weapon: String):
 			$Texture.texture = load("res://assets/soldiers/soldier_legendary.svg")
 	if weapon.contains("sword"):
 		$WeaponTexture.position = Vector2i(45, -39)
-		$SFXPlayer2D.stream = load("res://assets/audio/sword-hit.mp3")
+		$SFXPlayer2D.stream = load("res://assets/audio/sword_hit.wav")
 		sword = true
 	$WeaponTexture.texture = load(weapon)
 	$SFXPlayer2D.volume_linear = Database.get_value("sfx_volume", 100.0) / 100.0

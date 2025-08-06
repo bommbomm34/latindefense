@@ -1,9 +1,6 @@
-Background music in the "Fight" scene by Ievgen Poltavskyi (https://pixabay.com/users/hitslab-47305729/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=372155) from Pixabay (https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=372155)
-Background music in the other scenes by Dvir Silverstone (https://pixabay.com/users/sonican-38947841/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=361962) from Pixabay (https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=361962)
-Pay sound (for resources) by DRAGON-STUDIO (https://pixabay.com/users/dragon-studio-38165424/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=376867) from Pixabay (https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=376867)
-Sword hit sound (in the Game scene) by freesound_community (https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=7160) from Pixabay (https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=7160)
-
-This project is not particularly supported by the creators listed above.
+Background music (in scenes other than the Fight scene) provided by Alexandr Zhelanov (https://opengameart.org/users/alexandr-zhelanov) on https://opengameart.org/content/ancient-temple
+Background music (in the fight scene) provided by SubspaceAudio (https://opengameart.org/users/subspaceaudio) on https://opengameart.org/content/boss-battle-music
+Sword hit sound provided by BMacZero (https://opengameart.org/users/bmaczero) on https://opengameart.org/content/metal-impact-sounds
 
 The Roman empire map is based on this map (https://commons.wikimedia.org/wiki/File:RomanEmpire_117.svg).
 Here is the credit for the game font: Copyright 2020 The Cinzel Project Authors (https://github.com/NDISCOVER/Cinzel). This Font Software is licensed under the SIL Open Font License, Version 1.1 (https://openfontlicense.org).
@@ -16,7 +13,7 @@ This game uses Godot Engine. See this page (https://godotengine.org/license/) or
 
 The game itself (without the assets, plugin and the engine named above) is licensed under the following license:
 
------ BEGIN OF LICENSE -----
+----- BEGIN OF GAME LICENSE -----
 
 Copyright (c) 2025 bommbomm34.
 
@@ -38,4 +35,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
------ END OF LICENSE -----
+----- END OF GAME LICENSE -----

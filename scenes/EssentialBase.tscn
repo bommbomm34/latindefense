@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c3302b30ayxm1"]
 
 [ext_resource type="Script" uid="uid://d0yl6bndnn2yj" path="res://scripts/essential_base.gd" id="1_t6d8n"]
-[ext_resource type="AudioStream" uid="uid://bme8gt0kpqnr2" path="res://assets/audio/bgmusic_regular.mp3" id="2_t6d8n"]
+[ext_resource type="AudioStream" uid="uid://bef7oybl1jpqg" path="res://assets/audio/bgmusic_regular.ogg" id="2_t6d8n"]
 
 [node name="EssentialBase" type="Control"]
 layout_mode = 3
