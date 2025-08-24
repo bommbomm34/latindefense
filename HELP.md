@@ -36,7 +36,7 @@ You become four options to select. The options will be in your selected language
 
 ## Map
 
-Select the province, you want to fight against. You can only fight against provinces, if they are your neighbors. If you click one of them, you see the number of soldiers it has and the amount of denar it has. You will get the denar, if you invade the province. You also see the life in red. The default life is 7000. Click on FIGHT to fight against the selected province! You can move with the right mouse button (non-touch) or via drag (touch).
+Select the province, you want to fight against. You can only fight against provinces, if they are your neighbors. If you click one of them, you see the number of soldiers it has and the amount of denar it has. You will get the denar, if you invade the province. You also see the life in red. The default life is 7000. Click on FIGHT to fight against the selected province! You can move with the left mouse button (non-touch) or via drag (touch).
 
 ## Gameplay
 

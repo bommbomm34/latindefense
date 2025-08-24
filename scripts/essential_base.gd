@@ -22,7 +22,7 @@ func _on_bgmusic_finished() -> void:
 	$BackgroundMusicPlayer.play()
 
 func set_volume():
-	$BackgroundMusicPlayer.volume_linear = Database.get_value("music_volume", 100) / 100.0
+	$BackgroundMusicPlayer.volume_linear = Database.get_value("music_volume", 30) / 100.0
 
 #func format_buttons():
 	#if get_parent().get_children().size() == 2:

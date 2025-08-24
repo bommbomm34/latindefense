@@ -9,6 +9,7 @@ func _ready():
 	Database.set_default_value("soldier_rare_amount", 6)
 	Database.set_default_value("soldier_legendary_amount", 3)
 	Database.set_default_value("self_life", 7000)
+	Database.set_default_value("sfx_volume", 7)
 	Database.set_value("Italia_owned", true)
 	$SelfLifeLabel.text = str(Database.get_value("self_life", 7000))
 	RenderingServer.set_default_clear_color(Database.get_value("bg_color", Color("036462")))
