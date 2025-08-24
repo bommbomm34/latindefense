@@ -5,20 +5,14 @@
 
 [node name="DenarView" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -1160.0
-offset_bottom = -960.0
-grow_horizontal = 2
-grow_vertical = 2
+anchor_left = 0.01
+anchor_right = 0.01
 script = ExtResource("1_n7qpk")
 
 [node name="InfoLabel" type="RichTextLabel" parent="."]
 z_index = -5
-layout_mode = 0
-offset_left = 12.0
-offset_right = 736.0
+layout_mode = 1
+offset_right = 724.0
 offset_bottom = 112.0
 theme = ExtResource("1_3sf65")
 bbcode_enabled = true

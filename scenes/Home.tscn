@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://d1158a2ro4m8a"]
+[gd_scene load_steps=25 format=3 uid="uid://d1158a2ro4m8a"]
 
 [ext_resource type="Script" uid="uid://jut1x33l8iwp" path="res://scripts/home.gd" id="1_23ovu"]
 [ext_resource type="Theme" uid="uid://bl7glh8ic4a3a" path="res://assets/theme/theme.tres" id="1_ilu88"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://tggu0pplkcn8" path="res://assets/metadata/logo.svg" id="9_fs62j"]
 [ext_resource type="Script" uid="uid://dbap0gqox0ty1" path="res://addons/markdownlabel/markdownlabel.gd" id="10_n4517"]
 [ext_resource type="PackedScene" uid="uid://dnjqber76fd1r" path="res://scenes/DenarView.tscn" id="11_mlk18"]
+[ext_resource type="FontFile" uid="uid://43pnamjv37vy" path="res://assets/font/Cinzel-VariableFont_wght.ttf" id="11_va03u"]
 [ext_resource type="Script" uid="uid://dcx7crs23nf4" path="res://addons/markdownlabel/header_formats/h1_format.gd" id="11_x0wfn"]
 [ext_resource type="Script" uid="uid://d0sin64i4v3op" path="res://addons/markdownlabel/header_formats/h2_format.gd" id="12_va03u"]
 [ext_resource type="Script" uid="uid://dlok0dv1tq2bf" path="res://addons/markdownlabel/header_formats/h3_format.gd" id="13_biiq1"]
@@ -88,11 +89,14 @@ grow_vertical = 2
 script = ExtResource("1_23ovu")
 
 [node name="AboutButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 912.0
-offset_top = 37.0
-offset_right = 1198.0
-offset_bottom = 169.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.68
+anchor_top = 0.05
+anchor_right = 0.68
+anchor_bottom = 0.06
+offset_left = -255.0
+offset_bottom = 120.0
 theme = ExtResource("1_ilu88")
 theme_override_font_sizes/font_size = 60
 text = "About"
@@ -101,11 +105,17 @@ icon_alignment = 2
 expand_icon = true
 
 [node name="HelpButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 935.0
-offset_top = 875.0
-offset_right = 1104.0
-offset_bottom = 1048.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.55
+anchor_top = 0.98
+anchor_right = 0.55
+anchor_bottom = 0.98
+offset_left = -84.5
+offset_top = -173.0
+offset_right = 84.5
+grow_horizontal = 2
+grow_vertical = 0
 theme = ExtResource("1_ilu88")
 theme_override_font_sizes/font_size = 128
 toggle_mode = true
@@ -114,11 +124,15 @@ icon_alignment = 2
 expand_icon = true
 
 [node name="SettingsButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 1302.0
-offset_top = 37.0
-offset_right = 1767.0
-offset_bottom = 167.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.98
+anchor_top = 0.05
+anchor_right = 0.98
+anchor_bottom = 0.05
+offset_left = -465.0
+offset_bottom = 130.0
+grow_horizontal = 0
 theme = ExtResource("1_ilu88")
 theme_override_font_sizes/font_size = 60
 text = "Settings"
@@ -127,11 +141,17 @@ icon_alignment = 2
 expand_icon = true
 
 [node name="ResourcesButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 1315.0
-offset_top = 453.0
-offset_right = 1822.0
-offset_bottom = 577.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.98
+anchor_top = 0.5
+anchor_right = 0.98
+anchor_bottom = 0.5
+offset_left = -507.0
+offset_top = -62.0
+offset_bottom = 62.0
+grow_horizontal = 0
+grow_vertical = 2
 theme = ExtResource("1_ilu88")
 theme_override_font_sizes/font_size = 60
 text = "Resources"
@@ -140,11 +160,16 @@ icon_alignment = 2
 expand_icon = true
 
 [node name="MapButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 1273.0
-offset_top = 885.0
-offset_right = 1810.0
-offset_bottom = 1049.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.98
+anchor_top = 0.98
+anchor_right = 0.98
+anchor_bottom = 0.98
+offset_left = -537.0
+offset_top = -164.0
+grow_horizontal = 0
+grow_vertical = 0
 theme = ExtResource("1_ilu88")
 theme_override_font_sizes/font_size = 120
 text = "Map"
@@ -154,11 +179,15 @@ expand_icon = true
 script = ExtResource("7_x0wfn")
 
 [node name="VocabsButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 35.0
-offset_top = 853.0
-offset_right = 747.0
-offset_bottom = 1066.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.02
+anchor_top = 0.98
+anchor_right = 0.02
+anchor_bottom = 0.98
+offset_top = -213.0
+offset_right = 712.0
+grow_vertical = 0
 theme = ExtResource("1_ilu88")
 theme_override_font_sizes/font_size = 120
 text = "Vocabs"
@@ -188,19 +217,30 @@ layout_mode = 1
 offset_right = -1765.0
 
 [node name="SelfLifeLabel" type="Label" parent="."]
-layout_mode = 0
-offset_left = 473.0
-offset_right = 773.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_right = 0.25
+offset_right = 300.0
 offset_bottom = 173.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 100
 
 [node name="Help" type="RichTextLabel" parent="."]
 visible = false
-layout_mode = 0
-offset_top = 235.0
-offset_right = 1227.0
-offset_bottom = 810.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -657.0
+offset_top = -331.0
+offset_right = 389.0
+offset_bottom = 244.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("11_va03u")
 theme_override_font_sizes/bold_italics_font_size = 1
 theme_override_font_sizes/italics_font_size = 32
 theme_override_font_sizes/mono_font_size = 32

@@ -15,15 +15,27 @@ script = ExtResource("1_li4ei")
 
 [node name="Base" parent="." instance=ExtResource("1_k6hwd")]
 layout_mode = 1
-offset_right = -1179.0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 denar_view_visiblity = false
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 207.0
-offset_top = 79.0
-offset_right = 1861.0
-offset_bottom = 992.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.55
+anchor_top = 0.5
+anchor_right = 0.55
+anchor_bottom = 0.5
+offset_left = -827.0
+offset_top = -456.5
+offset_right = 827.0
+offset_bottom = 456.5
+grow_horizontal = 2
+grow_vertical = 2
 focus_mode = 2
 theme_override_fonts/italics_font = ExtResource("2_gpaav")
 theme_override_font_sizes/italics_font_size = 30

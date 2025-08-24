@@ -36,7 +36,7 @@ func init(given_enemy: bool, given_rarity: int, weapon: String):
 func _process(delta: float) -> void:
 	if not freezed:
 		if resume:
-			position.x += 200 * delta * (-1 if enemy else 1)
+			position.x += get_viewport_rect().size.x / 10.0 * delta * (-1 if enemy else 1)
 		if sword:
 			$AnimationPlayer.current_animation = "RESET" if resume and not freezed else "soldier_sword_fight"
 		else:
@@ -50,7 +50,7 @@ func _process(delta: float) -> void:
 			@warning_ignore("integer_division")
 			get_parent().get_parent().reduce_life_self(damage / 2)
 			queue_free()
-		elif position.x > 2000 and not enemy:
+		elif position.x > get_viewport_rect().size.x + 100 and not enemy:
 			@warning_ignore("integer_division")
 			get_parent().get_parent().reduce_life_enemy(damage / 2)
 			queue_free()

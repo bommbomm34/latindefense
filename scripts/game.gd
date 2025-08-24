@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @onready var Soldier = preload("res://scenes/Soldier.tscn")
 @onready var rng = RandomNumberGenerator.new()
@@ -19,8 +19,8 @@ var enemy_count = 0
 var self_soldier_order := []
 var enemy_soldier_order := []
 var last_soldier_spawn := 0
-const top_limit := 900
-const bottom_limit := 100
+var top_limit := 900
+var bottom_limit := 100
 const round_off_factor := 200
 const denar_icon_suffix := " [img=80x80]res://assets/icons/denar.png[/img]"
 const color_suffix := "[/color]"
@@ -109,6 +109,7 @@ func _process(_delta: float) -> void:
 		soldier.resume = enemy_soldier == null
 		soldier.enemy_soldier = enemy_soldier
 	update_values()
+	#update_limits()
 
 func freeze():
 	for soldier in $Soldiers.get_children():
@@ -127,6 +128,11 @@ func update_values():
 	$SoldierLegendaryAmountLabel.text = str(calculate_amount(Rarity.LEGENDARY))
 	$TotalEnemyAmount.text = str(enemy_soldier_order.size())
 
+func update_limits():
+	var addition = get_viewport_rect().size.y - 1080
+	bottom_limit = 100 + addition
+	top_limit = 900 + addition
+
 func calculate_amount(rarity: int) -> int:
 	var amount := 0
 	for soldier_rarity in self_soldier_order:
@@ -141,7 +147,7 @@ func if_soldier_must_stop(given_soldier):
 
 func spawn_enemy() -> void:
 	if not enemy_soldier_order.is_empty():
-		spawn_soldier(Vector2i(2000, find_y_for_enemy()), true)
+		spawn_soldier(Vector2i(get_viewport_rect().size.x + 100, find_y_for_enemy()), true)
 		$Timer.wait_time = randf_range(0.1, 0.5)
 
 func get_own_soldier_count():
@@ -187,7 +193,7 @@ func exit(award := 0):
 	$Menu/TotalSelfLifeLabel.text = str(Database.get_value("self_life", 7000))
 	Database.add_value("denar", get_real_award(award))
 	$Menu.visible = true
-	var result_label := $Menu/ResultLabel
+	var result_label := $Menu/ColorRect/ResultLabel
 	if Database.get_value(fight_against + "_life", 7000) <= 0:
 		$Menu/PlayAgainButton.disabled = true
 		Database.set_value(fight_against + "_life", 7000)

@@ -76,9 +76,8 @@ script = ExtResource("1_owb2l")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = 10
-offset_left = 1248.0
-offset_right = 1920.0
-offset_bottom = 350.0
+offset_right = 336.0
+offset_bottom = 175.0
 color = Color(0, 0, 0, 0.552941)
 
 [node name="MarkdownLabel" type="RichTextLabel" parent="ColorRect"]
@@ -87,6 +86,7 @@ offset_left = 1.0
 offset_top = 4.0
 offset_right = 671.0
 offset_bottom = 201.0
+scale = Vector2(0.5, 0.5)
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "[font_size=68]Province name[/font_size]
@@ -105,10 +105,11 @@ metadata/_custom_type_script = "uid://dbap0gqox0ty1"
 
 [node name="FightButton" type="Button" parent="ColorRect"]
 layout_mode = 0
-offset_left = 142.0
-offset_top = 221.0
-offset_right = 537.0
-offset_bottom = 317.0
+offset_left = 66.0
+offset_top = 111.0
+offset_right = 461.0
+offset_bottom = 207.0
+scale = Vector2(0.5, 0.5)
 theme_override_font_sizes/font_size = 70
 text = "Fight"
 icon = ExtResource("9_gjoot")

@@ -33,7 +33,7 @@ func _ready() -> void:
 		color = Color.CADET_BLUE
 	else:
 		color = Color.BLUE_VIOLET
-	open_popup = get_node("../../Camera2D/Popup")
+	open_popup = get_node("../../Popup")
 	#var size := get_province_size()
 	#var calc_denar = roundi(size.x)
 	#var calc_soldier_count = roundi(size.y)
@@ -107,4 +107,3 @@ func load_values():
 			denar = int(array.get(1))
 			soldier_count = int(array.get(2))
 			break
-	

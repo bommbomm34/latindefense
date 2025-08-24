@@ -16,7 +16,7 @@ mouse_filter = 2
 script = ExtResource("2_5sj8r")
 
 [node name="BackButton" type="Button" parent="."]
-layout_mode = 0
+layout_mode = 1
 offset_left = 24.0
 offset_top = 16.0
 offset_right = 168.0
@@ -28,8 +28,12 @@ expand_icon = true
 
 [node name="DenarView" parent="." instance=ExtResource("3_j2xnf")]
 layout_mode = 1
-offset_top = 960.0
-offset_right = 44.0
-offset_bottom = -8.0
+anchor_left = 0.02
+anchor_top = 1.0
+anchor_right = 0.02
+anchor_bottom = 1.0
+offset_top = -120.0
+offset_right = 632.0
+grow_vertical = 0
 
 [connection signal="pressed" from="BackButton" to="." method="_on_pressed"]
