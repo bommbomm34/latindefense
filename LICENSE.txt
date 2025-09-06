@@ -1,6 +1,6 @@
-Background music (in scenes other than the Fight scene) provided by Alexandr Zhelanov (https://opengameart.org/users/alexandr-zhelanov) on https://opengameart.org/content/ancient-temple
-Background music (in the fight scene) provided by SubspaceAudio (https://opengameart.org/users/subspaceaudio) on https://opengameart.org/content/boss-battle-music
-Sword hit sound provided by BMacZero (https://opengameart.org/users/bmaczero) on https://opengameart.org/content/metal-impact-sounds
+Background music (in scenes other than the Fight scene) by Alexandr Zhelanov (https://opengameart.org/users/alexandr-zhelanov) is licensed under CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/) on https://opengameart.org/content/ancient-temple
+Background music (in the fight scene) by SubspaceAudio (https://opengameart.org/users/subspaceaudio) is licensed under CC0-1.0 (http://creativecommons.org/publicdomain/zero/1.0/) on https://opengameart.org/content/boss-battle-music
+Sword hit sound by BMacZero (https://opengameart.org/users/bmaczero) is licensed under CC0-1.0 (http://creativecommons.org/publicdomain/zero/1.0/) on https://opengameart.org/content/metal-impact-sounds
 
 The Roman empire map is based on this map (https://commons.wikimedia.org/wiki/File:RomanEmpire_117.svg).
 Here is the credit for the game font: Copyright 2020 The Cinzel Project Authors (https://github.com/NDISCOVER/Cinzel). This Font Software is licensed under the SIL Open Font License, Version 1.1 (https://openfontlicense.org).
