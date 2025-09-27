@@ -1,4 +1,4 @@
-en,de,tr
+﻿en,de,tr
 About,Über,Bilgi
 Vocabs,Vokabeln,Kelimeler
 Resources,Resourcen,Kaynaklar
@@ -15,6 +15,7 @@ Fight,Kämpfen,Dövüş
 Click on the correct translation of the word.,Klicken Sie auf den \nrichtigen Übersetzung des Worts.,Kelimenin doğru çevirimine tıkla.
 Language,Sprache,Dil
 Right,Richtig,Doğru
-Wrong,Falsch,Yanlış
+Wrong. Right: ,Falsch. Richtig: ,Yanlış. Doğru: 
 Back to Home,Zu Home,Eve git
 Play again,Nochmal spielen,Yeniden oyna
+

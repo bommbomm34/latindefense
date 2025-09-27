@@ -45,7 +45,7 @@ func right():
 	
 func wrong():
 	Database.add_value("denar", get_anti_reward())
-	$Feedback.text = "Wrong"
+	$Feedback.text = tr("Wrong. Right: ") + right_option
 	$Feedback.add_theme_color_override("font_color", Color.RED)
 
 func get_anti_reward():
