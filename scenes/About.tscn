@@ -1,8 +1,39 @@
-[gd_scene load_steps=4 format=3 uid="uid://5jt2saf61r7i"]
+[gd_scene load_steps=17 format=3 uid="uid://5jt2saf61r7i"]
 
 [ext_resource type="PackedScene" uid="uid://dsckvvmxhdqcw" path="res://scenes/Base.tscn" id="1_k6hwd"]
 [ext_resource type="Script" uid="uid://bnwkqcusymbdp" path="res://scripts/about.gd" id="1_li4ei"]
 [ext_resource type="FontFile" uid="uid://43pnamjv37vy" path="res://assets/font/Cinzel-VariableFont_wght.ttf" id="2_gpaav"]
+[ext_resource type="Script" uid="uid://dbap0gqox0ty1" path="res://addons/markdownlabel/markdownlabel.gd" id="4_tpi4g"]
+[ext_resource type="Script" uid="uid://dcx7crs23nf4" path="res://addons/markdownlabel/header_formats/h1_format.gd" id="5_orvag"]
+[ext_resource type="Script" uid="uid://d0sin64i4v3op" path="res://addons/markdownlabel/header_formats/h2_format.gd" id="6_4hagb"]
+[ext_resource type="Script" uid="uid://dlok0dv1tq2bf" path="res://addons/markdownlabel/header_formats/h3_format.gd" id="7_faqgo"]
+[ext_resource type="Script" uid="uid://bayuh2vafablg" path="res://addons/markdownlabel/header_formats/h4_format.gd" id="8_vphdg"]
+[ext_resource type="Script" uid="uid://dfr1w7u3jgni3" path="res://addons/markdownlabel/header_formats/h5_format.gd" id="9_o0dny"]
+[ext_resource type="Script" uid="uid://bsi6dexoofpe6" path="res://addons/markdownlabel/header_formats/h6_format.gd" id="10_1agee"]
+
+[sub_resource type="Resource" id="Resource_i26jq"]
+resource_local_to_scene = true
+script = ExtResource("5_orvag")
+
+[sub_resource type="Resource" id="Resource_lo3tl"]
+resource_local_to_scene = true
+script = ExtResource("6_4hagb")
+
+[sub_resource type="Resource" id="Resource_5xd7u"]
+resource_local_to_scene = true
+script = ExtResource("7_faqgo")
+
+[sub_resource type="Resource" id="Resource_fo7vq"]
+resource_local_to_scene = true
+script = ExtResource("8_vphdg")
+
+[sub_resource type="Resource" id="Resource_ekpox"]
+resource_local_to_scene = true
+script = ExtResource("9_o0dny")
+
+[sub_resource type="Resource" id="Resource_vigrk"]
+resource_local_to_scene = true
+script = ExtResource("10_1agee")
 
 [node name="About" type="Control"]
 layout_mode = 3
@@ -23,7 +54,7 @@ grow_horizontal = 1
 grow_vertical = 1
 denar_view_visiblity = false
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="Content" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.55
@@ -38,51 +69,17 @@ grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 2
 theme_override_fonts/italics_font = ExtResource("2_gpaav")
-theme_override_font_sizes/italics_font_size = 30
 theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
 bbcode_enabled = true
-text = "Background music (in scenes other than the Fight scene) by [url=https://opengameart.org/users/alexandr-zhelanov]Alexandr Zhelanov[/url] is licensed under [url=https://creativecommons.org/licenses/by/4.0/]CC-BY-4.0[/url] on [url=https://opengameart.org/content/ancient-temple]this OpenGameArt page[/url].
-Background music (in the fight scene) by [url=https://opengameart.org/users/subspaceaudio]SubspaceAudio[/url] is licensed under [url=http://creativecommons.org/publicdomain/zero/1.0/]CC0-1.0[/url] on [url=https://opengameart.org/content/boss-battle-music]this OpenGameArt page[/url].
-Sword hit sound by [url=https://opengameart.org/users/bmaczero]BMacZero[/url] is licensed under [url=http://creativecommons.org/publicdomain/zero/1.0/]CC0-1.0[/url] on [url=https://opengameart.org/content/metal-impact-sounds]this OpenGameArt page[/url].
-
-This project is not particularly supported by the creators listed above.
-
-The Roman empire map is based on [url=https://commons.wikimedia.org/wiki/File:RomanEmpire_117.svg]this map[/url].
-
-The English version of the vocabs are made of the stardict version of [url=https://github.com/nikita-moor/latin-dictionary/releases/tag/2020-05-05]this dictionary[/url].
-The versions of the vocabs in other languages are automatically translated from the English version with [url=https://github.com/argosopentech/argos-translate]Argos Translate[/url].
-
-Here is the credit for the game font: Copyright 2020 [url=https://github.com/NDISCOVER/Cinzel]The Cinzel Project Authors[/url]. This Font Software is licensed under the [url=https://openfontlicense.org]SIL Open Font License, Version 1.1[/url].
-
-The game uses the [url=https://godotengine.org/asset-library/asset/2302]MarkdownLabel plugin[/url] by [url=https://godotengine.org/asset-library/asset?user=daenvil]daenvil[/url].
-This game uses Godot Engine. See [url=https://godotengine.org/license/]this page[/url] for more information about the licensing of the game engine.
-
-The game itself (without the assets, plugin and the engine named above) is licensed under the following license:
-
------ BEGIN OF GAME LICENSE -----
-[i]
-Copyright (c) 2025 bommbomm34.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the \"Software\"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-[/i]
------ END OF GAME LICENSE -----
-"
 selection_enabled = true
+script = ExtResource("4_tpi4g")
+h1 = SubResource("Resource_i26jq")
+h2 = SubResource("Resource_lo3tl")
+h3 = SubResource("Resource_5xd7u")
+h4 = SubResource("Resource_fo7vq")
+h5 = SubResource("Resource_ekpox")
+h6 = SubResource("Resource_vigrk")
+metadata/_custom_type_script = "uid://dbap0gqox0ty1"
 
-[connection signal="meta_clicked" from="RichTextLabel" to="." method="_on_meta_clicked"]
+[connection signal="meta_clicked" from="Content" to="." method="_on_meta_clicked"]
