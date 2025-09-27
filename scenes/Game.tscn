@@ -13,7 +13,6 @@ grow_vertical = 2
 script = ExtResource("1_ibkli")
 
 [node name="Soldiers" type="Control" parent="."]
-layout_mode = 3
 anchors_preset = 0
 metadata/_edit_lock_ = true
 
@@ -124,29 +123,48 @@ grow_vertical = 2
 color = Color(0.301961, 0.301961, 0.301961, 0.847059)
 
 [node name="BackToHomeButton" type="Button" parent="Menu/ColorRect"]
-layout_mode = 0
-offset_left = 148.0
-offset_top = 149.0
-offset_right = 602.0
-offset_bottom = 231.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -227.0
+offset_top = -41.0
+offset_right = 227.0
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 60
 text = "Back to Home"
 
 [node name="PlayAgainButton" type="Button" parent="Menu/ColorRect"]
-layout_mode = 0
-offset_left = 148.0
-offset_top = 265.0
-offset_right = 595.0
-offset_bottom = 347.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.8
+anchor_right = 0.5
+anchor_bottom = 0.8
+offset_left = -223.5
+offset_top = -41.0
+offset_right = 223.5
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 60
 text = "Play again"
 
 [node name="ResultLabel" type="RichTextLabel" parent="Menu/ColorRect"]
-layout_mode = 0
-offset_left = -81.0
-offset_top = 14.0
-offset_right = 822.0
-offset_bottom = 126.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.05
+anchor_right = 0.5
+anchor_bottom = 0.05
+offset_left = -451.5
+offset_right = 451.5
+offset_bottom = 112.0
+grow_horizontal = 2
 bbcode_enabled = true
 text = "Won"
 horizontal_alignment = 1
