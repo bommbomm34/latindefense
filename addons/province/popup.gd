@@ -32,4 +32,4 @@ func change_to_scene(path: String):
 
 func _process(delta: float) -> void:
 	var screen_size = get_viewport_rect().size
-	position = get_node("../Camera2D").get_screen_center_position() + Vector2(screen_size.x / 4.0 - 336, screen_size.y / -4.0)
+	position = get_node("../Camera2D").get_screen_center_position() + Vector2(screen_size.x / 4.0 - $ColorRect.size.x, screen_size.y / -4.0)

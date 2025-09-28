@@ -16,4 +16,4 @@ If you need help to play the game, please read [HELP.md](HELP.md).
 
 ## Licensing
 
-You can see the licensing in [LICENSE.txt](LICENSE.txt).
+You can see the licensing in [LICENSE.md](LICENSE.md).

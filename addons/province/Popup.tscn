@@ -13,62 +13,26 @@
 [sub_resource type="Resource" id="Resource_tahk8"]
 resource_local_to_scene = true
 script = ExtResource("2_owb2l")
-font_size = 2.285
-is_bold = false
-is_italic = false
-is_underlined = false
-override_font_color = false
-font_color = Color(1, 1, 1, 1)
 
 [sub_resource type="Resource" id="Resource_wg8oe"]
 resource_local_to_scene = true
 script = ExtResource("3_gjoot")
-font_size = 1.714
-is_bold = false
-is_italic = false
-is_underlined = false
-override_font_color = false
-font_color = Color(1, 1, 1, 1)
 
 [sub_resource type="Resource" id="Resource_oks3b"]
 resource_local_to_scene = true
 script = ExtResource("4_gkdsv")
-font_size = 1.428
-is_bold = false
-is_italic = false
-is_underlined = false
-override_font_color = false
-font_color = Color(1, 1, 1, 1)
 
 [sub_resource type="Resource" id="Resource_ycxn4"]
 resource_local_to_scene = true
 script = ExtResource("5_l5ssn")
-font_size = 1.142
-is_bold = false
-is_italic = false
-is_underlined = false
-override_font_color = false
-font_color = Color(1, 1, 1, 1)
 
 [sub_resource type="Resource" id="Resource_bgtdw"]
 resource_local_to_scene = true
 script = ExtResource("6_0mnsp")
-font_size = 1.0
-is_bold = false
-is_italic = false
-is_underlined = false
-override_font_color = false
-font_color = Color(1, 1, 1, 1)
 
 [sub_resource type="Resource" id="Resource_ah24t"]
 resource_local_to_scene = true
 script = ExtResource("7_mny8k")
-font_size = 0.857
-is_bold = false
-is_italic = false
-is_underlined = false
-override_font_color = false
-font_color = Color(1, 1, 1, 1)
 
 [node name="Popup" type="Node2D"]
 visible = false
@@ -76,18 +40,18 @@ script = ExtResource("1_owb2l")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = 10
-offset_right = 336.0
-offset_bottom = 175.0
+offset_right = 403.2
+offset_bottom = 210.0
 color = Color(0, 0, 0, 0.552941)
 
 [node name="MarkdownLabel" type="RichTextLabel" parent="ColorRect"]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 4.0
-offset_right = 671.0
-offset_bottom = 201.0
+offset_right = 805.0
+offset_bottom = 240.4
 scale = Vector2(0.5, 0.5)
-theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/normal_font_size = 36
 bbcode_enabled = true
 text = "[font_size=68]Province name[/font_size]
 [font_size=42]000 [img=40x40]res://assets/icons/denar.png[/img] 000 [img=40]res://assets/soldiers/soldier_common.svg[/img][/font_size]"
@@ -105,12 +69,12 @@ metadata/_custom_type_script = "uid://dbap0gqox0ty1"
 
 [node name="FightButton" type="Button" parent="ColorRect"]
 layout_mode = 0
-offset_left = 66.0
-offset_top = 111.0
-offset_right = 461.0
-offset_bottom = 207.0
+offset_left = 79.2
+offset_top = 133.2
+offset_right = 553.2
+offset_bottom = 248.4
 scale = Vector2(0.5, 0.5)
-theme_override_font_sizes/font_size = 70
+theme_override_font_sizes/font_size = 84
 text = "Fight"
 icon = ExtResource("9_gjoot")
 icon_alignment = 2

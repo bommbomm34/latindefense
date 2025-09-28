@@ -22,62 +22,26 @@
 [sub_resource type="Resource" id="Resource_r1riy"]
 resource_local_to_scene = true
 script = ExtResource("11_x0wfn")
-font_size = 2.285
-is_bold = false
-is_italic = false
-is_underlined = false
-override_font_color = false
-font_color = Color(1, 1, 1, 1)
 
 [sub_resource type="Resource" id="Resource_88yq0"]
 resource_local_to_scene = true
 script = ExtResource("12_va03u")
-font_size = 1.714
-is_bold = false
-is_italic = false
-is_underlined = false
-override_font_color = false
-font_color = Color(1, 1, 1, 1)
 
 [sub_resource type="Resource" id="Resource_dct4q"]
 resource_local_to_scene = true
 script = ExtResource("13_biiq1")
-font_size = 1.428
-is_bold = false
-is_italic = false
-is_underlined = false
-override_font_color = false
-font_color = Color(1, 1, 1, 1)
 
 [sub_resource type="Resource" id="Resource_k40ht"]
 resource_local_to_scene = true
 script = ExtResource("14_6g2ad")
-font_size = 1.142
-is_bold = false
-is_italic = false
-is_underlined = false
-override_font_color = false
-font_color = Color(1, 1, 1, 1)
 
 [sub_resource type="Resource" id="Resource_w1b7w"]
 resource_local_to_scene = true
 script = ExtResource("15_rpj2a")
-font_size = 1.0
-is_bold = false
-is_italic = false
-is_underlined = false
-override_font_color = false
-font_color = Color(1, 1, 1, 1)
 
 [sub_resource type="Resource" id="Resource_n1rrq"]
 resource_local_to_scene = true
 script = ExtResource("16_i1qc7")
-font_size = 0.857
-is_bold = false
-is_italic = false
-is_underlined = false
-override_font_color = false
-font_color = Color(1, 1, 1, 1)
 
 [node name="Home" type="Control"]
 layout_mode = 3
@@ -241,11 +205,11 @@ offset_bottom = 244.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("11_va03u")
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
 theme_override_font_sizes/bold_italics_font_size = 1
 theme_override_font_sizes/italics_font_size = 32
 theme_override_font_sizes/mono_font_size = 32
-theme_override_font_sizes/normal_font_size = 32
-theme_override_font_sizes/bold_font_size = 32
 bbcode_enabled = true
 text = "[font_size=73]Help[/font_size]
 
