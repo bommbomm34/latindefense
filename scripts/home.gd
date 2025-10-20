@@ -14,6 +14,9 @@ func _ready():
 	$SelfLifeLabel.text = str(Database.get_value("self_life", 7000))
 	RenderingServer.set_default_clear_color(Database.get_value("bg_color", Color("036462")))
 	start_background_music()
+	
+	var file := FileAccess.open("res://HELP.md", FileAccess.READ)
+	$Help.markdown_text = file.get_as_text()
 
 func _on_about_button_pressed() -> void:
 	call_deferred("change_to_scene", "res://scenes/About.tscn")
