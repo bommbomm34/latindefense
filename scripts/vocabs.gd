@@ -14,6 +14,7 @@ func _ready() -> void:
 
 func load_cards():
 	cards.clear()
+	review_cards.clear()
 	all_answers.clear()
 	var saved_cards = Database.get_value("cards", null)
 	if saved_cards == null:
@@ -69,12 +70,17 @@ func select(option: String):
 
 func review_current_card(correct_response: bool):
 	current_card.review(4 if correct_response else 0)
-	var occurence = cards.find_custom(func (card): return card.question == current_card.question)
-	var occurence_review = review_cards.find_custom(func (card): return card.question == current_card.question)
-	cards.erase(occurence)
-	review_cards.erase(occurence_review)
+	remove_card_by_question(cards, current_card.question)
+	remove_card_by_question(review_cards, current_card.question)
+	$LeftCards.text = str(review_cards.size())
 	cards.append(current_card)
 	save_cards()
+
+func remove_card_by_question(card_array: Array, question: String):
+	for i in range(card_array.size()):
+		if card_array[i].question == question:
+			card_array.remove_at(i)
+			return
 
 func right():
 	Database.add_value("denar", reward)

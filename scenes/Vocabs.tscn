@@ -123,6 +123,21 @@ offset_right = 0.0
 offset_bottom = 0.0
 metadata/_edit_lock_ = true
 
+[node name="LeftCards" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.99
+anchor_top = 0.99
+anchor_right = 0.99
+anchor_bottom = 0.99
+offset_left = -433.0
+offset_top = -82.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.2592936, 0.25929376, 0.25929365, 1)
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 2
+
 [connection signal="pressed" from="Option1" to="." method="_on_option_1_pressed"]
 [connection signal="pressed" from="Option2" to="." method="_on_option_2_pressed"]
 [connection signal="pressed" from="Option3" to="." method="_on_option_3_pressed"]
