@@ -37,6 +37,11 @@ enabled=PackedStringArray("res://addons/markdownlabel/plugin.cfg", "res://addons
 theme/custom="uid://bl7glh8ic4a3a"
 theme/custom_font="uid://43pnamjv37vy"
 
+[input_devices]
+
+pointing/android/enable_long_press_as_right_click=true
+pointing/emulate_touch_from_mouse=true
+
 [internationalization]
 
 locale/translations=PackedStringArray("res://assets/localization/localization.de.translation", "res://assets/localization/localization.tr.translation")

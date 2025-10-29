@@ -12,6 +12,9 @@ func _ready() -> void:
 	load_cards()
 	apply_vocab()
 
+func _process(_delta: float) -> void:
+	$LeftCards.text = str(review_cards.size())
+
 func load_cards():
 	cards.clear()
 	review_cards.clear()
@@ -72,7 +75,6 @@ func review_current_card(correct_response: bool):
 	current_card.review(4 if correct_response else 0)
 	remove_card_by_question(cards, current_card.question)
 	remove_card_by_question(review_cards, current_card.question)
-	$LeftCards.text = str(review_cards.size())
 	cards.append(current_card)
 	save_cards()
 
