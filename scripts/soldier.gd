@@ -10,6 +10,7 @@ var sword := false
 const damages = [20, 35, 50]
 @onready var rng = RandomNumberGenerator.new()
 @onready var life: float = rng.randf_range(90, 110)
+@onready var game_scene := get_parent().get_parent()
 
 func init(given_enemy: bool, given_rarity: int, weapon: String):
 	enemy = given_enemy
@@ -47,12 +48,11 @@ func _process(delta: float) -> void:
 		if enemy_soldier != null:
 			enemy_soldier.life -= damage * delta
 		if position.x < -100 and enemy:
-			get_parent().get_parent().reduce_life_self(damage / 2)
+			game_scene.reduce_life_self(damage / 2)
 			queue_free()
 		elif position.x > get_viewport_rect().size.x + 100 and not enemy:
-			get_parent().get_parent().reduce_life_enemy(damage / 2)
+			game_scene.reduce_life_enemy(damage / 2)
 			queue_free()
-
 
 func _on_timer_timeout() -> void:
 	if not resume and not freezed and $SFXPlayer2D.stream != null:

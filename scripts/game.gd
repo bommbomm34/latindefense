@@ -1,21 +1,14 @@
 extends Control
 
-@onready var Soldier = preload("res://scenes/Soldier.tscn")
-@onready var rng = RandomNumberGenerator.new()
-@onready var sword_common = "res://assets/weapons/sword_common.svg"
-@onready var sword_rare = "res://assets/weapons/sword_rare.svg"
-@onready var sword_legendary = "res://assets/weapons/sword_legendary.svg"
-@onready var bow_common = "res://assets/weapons/bow_common.svg"
-@onready var bow_rare = "res://assets/weapons/bow_rare.svg"
-@onready var bow_legendary = "res://assets/weapons/bow_legendary.svg"
+@onready var Soldier := preload("res://scenes/Soldier.tscn")
 @onready var multiplier: float = Database.get_value("farmer_common_amount", 0) * 0.1 + Database.get_value("farmer_rare_amount", 0) * 0.3 + Database.get_value("farmer_legendary_amount", 0) * 0.5 + 1
 @onready var fight_against: String = Database.get_temp_var("fight_against", "Noricum")
 @onready var life_enemy: int = min(max(Database.get_value(fight_against + "_life", 7000), 0), 100)
 @onready var life_self: int = min(max(Database.get_value("self_life", 7000), 0), 100)
 @onready var previous_life_enemy: int = Database.get_value(fight_against + "_life", 7000)
 @onready var previous_life_self: int = Database.get_value("self_life", 7000)
-var rarities = [Rarity.LEGENDARY, Rarity.RARE, Rarity.COMMON]
-var enemy_count = 0
+var rarities := [Rarity.LEGENDARY, Rarity.RARE, Rarity.COMMON]
+var enemy_count := 0
 var self_soldier_order := []
 var enemy_soldier_order := []
 var last_soldier_spawn := 0
@@ -27,8 +20,14 @@ const color_suffix := "[/color]"
 const red_color_praefix := "[color=ff0000]"
 const green_color_praefix := "[color=00ff00]"
 const yellow_color_praefix := "[color=ffff00]"
-const reward = 100
-const anti_reward = -50
+const reward := 300
+const anti_reward := -100
+const sword_common := "res://assets/weapons/sword_common.svg"
+const sword_rare := "res://assets/weapons/sword_rare.svg"
+const sword_legendary := "res://assets/weapons/sword_legendary.svg"
+const bow_common := "res://assets/weapons/bow_common.svg"
+const bow_rare := "res://assets/weapons/bow_rare.svg"
+const bow_legendary := "res://assets/weapons/bow_legendary.svg"
 
 func _ready() -> void:
 	$MultiplierLabel.text = str(multiplier) + "x"
@@ -50,7 +49,7 @@ func _input(event: InputEvent) -> void:
 		spawn_soldier(Vector2(0, round_off(max(bottom_limit, min(top_limit, event.position.y)))))
 
 func spawn_soldier(pos: Vector2, enemy: bool = false):
-	if check_distance(pos, enemy) and ((not enemy and Time.get_ticks_msec() >= (last_soldier_spawn + $Timer.wait_time)) or enemy):
+	if check_distance(pos, enemy):
 		var soldier = Soldier.instantiate()
 		var order = (enemy_soldier_order if enemy else self_soldier_order)
 		if not order.is_empty():
@@ -93,7 +92,7 @@ func get_weapons(rarity: int):
 
 func check_distance(pos: Vector2, enemy: bool):
 	for soldier in $Soldiers.get_children():
-		if pos.distance_to(soldier.position) < 150 and soldier.enemy == enemy:
+		if pos.distance_to(soldier.position) < 50 and soldier.enemy == enemy:
 			return false
 	return true
 
@@ -108,7 +107,6 @@ func _process(_delta: float) -> void:
 		soldier.resume = enemy_soldier == null
 		soldier.enemy_soldier = enemy_soldier
 	update_values()
-	#update_limits()
 
 func freeze():
 	for soldier in $Soldiers.get_children():
@@ -146,7 +144,6 @@ func if_soldier_must_stop(given_soldier):
 
 func spawn_enemy() -> void:
 	if not enemy_soldier_order.is_empty():
-		@warning_ignore("narrowing_conversion")
 		spawn_soldier(Vector2i(get_viewport_rect().size.x + 100, find_y_for_enemy()), true)
 		$Timer.wait_time = randf_range(0.1, 0.5)
 
@@ -211,8 +208,6 @@ func exit(award := 0):
 		result_label.text = yellow_color_praefix + tr("Drawn ") + color_suffix
 	else: 
 		result_label.text = red_color_praefix + tr("Lost ") + color_suffix + str(abs(max(award, -100))) + denar_icon_suffix
-
-
 
 func _on_back_to_home_button_pressed() -> void:
 	call_deferred("change_to_scene", "res://scenes/Home.tscn")

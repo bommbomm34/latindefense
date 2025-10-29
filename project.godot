@@ -27,6 +27,7 @@ EssentialBase="*res://scenes/EssentialBase.tscn"
 [debug]
 
 gdscript/warnings/incompatible_ternary=0
+gdscript/warnings/integer_division=0
 gdscript/warnings/narrowing_conversion=0
 
 [display]
