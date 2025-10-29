@@ -9,7 +9,6 @@ This project is not particularly supported by the creators listed above.
 The Roman empire map is based on [this map](https://commons.wikimedia.org/wiki/File:RomanEmpire_117.svg).
 
 The English version of the vocabs are made of the stardict version of [this dictionary](https://github.com/nikita-moor/latin-dictionary/releases/tag/2020-05-05).
-The versions of the vocabs in other languages are automatically translated from the English version with [Argos Translate](https://github.com/argosopentech/argos-translate).
 
 Here is the credit for the game font: Copyright 2020 [The Cinzel Project Authors](https://github.com/NDISCOVER/Cinzel). This Font Software is licensed under the [SIL Open Font License, Version 1.1](https://openfontlicense.org).
 
@@ -19,8 +18,6 @@ This game uses Godot Engine. See [this page](https://godotengine.org/license/) f
 ## License
 
 The game itself (without the assets, plugin and the engine named above) is licensed under the following license:
-
-
 
 *Copyright (c) 2025 bommbomm34.*
 

@@ -32,7 +32,7 @@ You can buy here soldiers and farmers. Rarer soldiers and farmers are more expen
 
 You become four options to select. The options will be in your selected language (or English, if your language is not available). You also see a latin word over the options. You need to click on the right translation. If you get it right, denar will be added, otherwise, you lose denar. You can see the feedback (RIGHT or WRONG) under the options. The game has totally 2810 vocabs. Your vocab state will be resetted, if you change the language or finish the vocabs. You can see the amount of cards you can review today at the bottom right corner. The game uses a simplified version of the SM-2 algorithm.
 
-**WARNING: The vocabs of German and Turkish are translated automatically. The translations could be wrong. If you see translation mistakes, please open an issue. Translations in other languages then English could be longer than the English ones. The translated word will be shortened with a dot if it exceeds the maximum word size. Sometimes, your clicked option can be true, but the game can it recognize as false. This can be, because the vocabs were automatically generated. The vocabs are provided WITHOUT ANY KIND OF WARRANTY.**
+**WARNING: Sometimes, your clicked option can be true, but the game can it recognize as false. This can be, because the vocabs were automatically generated. The vocabs are provided WITHOUT ANY KIND OF WARRANTY.**
 
 ## Map
 
@@ -42,4 +42,4 @@ Select the province, you want to fight against. You can only fight against provi
 
 If you are in the game, you see your temporary life in the bottom left of the game. The temporary life of the enemy is in the bottom right of the game. If the temporary life gets reduced, the total life gets also reduced by the same amount. You can see your total life after the fight over the temporary life labels. During the fight, you can click to spawn soldiers in that height (it will be rounded). Sometimes, you can't because of cheat protection. The enemy spawns soldiers automatically. You can see the amount of the rarities of the remaining soldiers you have on the top left side. You can also see the amount of all remaining soldiers the enemy has on the top right side. The soldiers will fight each other if they are near to each other. If a soldier reaches the other side, the other side loses life. If your total life is under 1 after the fight, the enemy's life gets 7000 and yours also, but you lose lots of denar. On the other side, if the enemy's total life is under 1, you invaded the enemy and you get its denars and its ownership.
 
-**Thanks for playing this game!**
+**Thanks for playing Latin Defense!**
