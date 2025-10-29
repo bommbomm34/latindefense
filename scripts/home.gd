@@ -14,7 +14,6 @@ func _ready():
 	Database.set_value("Italia_owned", true)
 	$SelfLifeLabel.text = str(Database.get_value("self_life", 7000))
 	RenderingServer.set_default_clear_color(Database.get_value("bg_color", Color("036462")))
-	start_background_music()
 	
 	var file := FileAccess.open("res://HELP.md", FileAccess.READ)
 	$Help.markdown_text = file.get_as_text()
@@ -33,12 +32,6 @@ func _on_vocabs_button_pressed() -> void:
 
 func _on_resources_button_pressed() -> void:
 	call_deferred("change_to_scene", "res://scenes/Resources.tscn")
-
-func start_background_music():
-	var root = get_tree().root
-	if not root.has_node("EssentialBase"):
-		root.call_deferred("add_child", load("res://scenes/EssentialBase.tscn").instantiate())
-
 
 func _on_map_button_pressed() -> void:
 	call_deferred("change_to_scene", "res://scenes/Map.tscn")

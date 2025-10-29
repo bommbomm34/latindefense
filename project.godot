@@ -20,6 +20,15 @@ boot_splash/use_filter=false
 boot_splash/image="uid://doog7r6sm82m"
 config/icon="uid://tggu0pplkcn8"
 
+[autoload]
+
+EssentialBase="*res://scenes/EssentialBase.tscn"
+
+[debug]
+
+gdscript/warnings/incompatible_ternary=0
+gdscript/warnings/narrowing_conversion=0
+
 [display]
 
 window/size/viewport_width=1920

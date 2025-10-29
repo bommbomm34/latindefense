@@ -102,7 +102,6 @@ func _process(_delta: float) -> void:
 		if (self_soldier_order.is_empty() and enemy_soldier_order.is_empty() and $Soldiers.get_children().is_empty()) or is_total_life_empty():
 			await get_tree().process_frame
 			freeze()
-			@warning_ignore("narrowing_conversion", "incompatible_ternary")
 			exit((reward * multiplier) if life_self > life_enemy else (anti_reward if life_self < life_enemy else -1))
 	for soldier in $Soldiers.get_children():
 		var enemy_soldier = if_soldier_must_stop(soldier)
@@ -147,6 +146,7 @@ func if_soldier_must_stop(given_soldier):
 
 func spawn_enemy() -> void:
 	if not enemy_soldier_order.is_empty():
+		@warning_ignore("narrowing_conversion")
 		spawn_soldier(Vector2i(get_viewport_rect().size.x + 100, find_y_for_enemy()), true)
 		$Timer.wait_time = randf_range(0.1, 0.5)
 

@@ -47,11 +47,9 @@ func _process(delta: float) -> void:
 		if enemy_soldier != null:
 			enemy_soldier.life -= damage * delta
 		if position.x < -100 and enemy:
-			@warning_ignore("integer_division")
 			get_parent().get_parent().reduce_life_self(damage / 2)
 			queue_free()
 		elif position.x > get_viewport_rect().size.x + 100 and not enemy:
-			@warning_ignore("integer_division")
 			get_parent().get_parent().reduce_life_enemy(damage / 2)
 			queue_free()
 
