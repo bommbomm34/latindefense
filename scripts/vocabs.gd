@@ -95,7 +95,6 @@ func wrong():
 	$Feedback.add_theme_color_override("font_color", Color.RED)
 
 func get_anti_reward():
-	@warning_ignore("integer_division")
 	var anti_reward: int = reward / -2
 	return 0 if Database.get_value("denar", 0) < abs(anti_reward) else anti_reward
 
