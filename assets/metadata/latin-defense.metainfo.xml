@@ -9,7 +9,7 @@
   <summary>Expand your own Roman Empire!</summary>
   
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>MIT AND CC0-1.0 AND CC-BY-4.0</project_license>
+  <project_license>MIT AND CC0-1.0 AND CC-BY-4.0 AND OFL-1.1</project_license>
   
   <recommends>
 	<control>keyboard</control>
@@ -17,8 +17,21 @@
 	<control>touch</control>
   </recommends>
   
+	<categories>
+		<category>Game</category>
+		<category>2DGraphics</category>
+		<category>StrategyGame</category>
+	</categories>
+
+	<keywords>
+		<keyword>game</keyword>
+		<keyword>strategy</keyword>
+		<keyword>vocabulary</keyword>
+		<keyword>learn</keyword>
+	</keywords>
+
   <branding>
-	<color type="primary" scheme_preference="light">#ea7b7b</color>
+	<color type="primary" scheme_preference="light">#f7a6a6</color>
 	<color type="primary" scheme_preference="dark">#3b1c1c</color>
   </branding>
   
@@ -26,9 +39,21 @@
   <url type="vcs-browser">https://github.com/bommbomm34/latindefense</url>
   <url type="bugtracker">https://github.com/bommbomm34/latindefense/issues</url>
   <description>
-	<p>You are the leader of your Roman Empire, but it has only one province. Expand your empire to get more might. Get farmers, denar and soldiers to expand your empire. You need to invade 43 other provinces to finish the game. You gain rewards by learning Latin vocabs. If you want to reset your savegame, simply click RESET in Settings.</p>
+	<p>You are the leader of your Roman Empire, but it has only one province. Expand your empire to get more might. Get farmers, denar and soldiers to expand your empire. You need to invade other provinces. You gain rewards by learning Latin vocabs.</p>
   </description>
   <releases>
+  <release version="1.2.0" date="2025-10-30">
+	<url type="details">https://bommbomm34.itch.io/latin-defense/devlog/1098411/update-120</url>
+	<description>
+		<ul>
+		  <li>Prettier map</li>
+		  <li>Optimized map dragging (and made it smoother)</li>
+		  <li>Optimized gameplay</li>
+		  <li>Deleted German and Turkish vocab versions (due to too many bugs)</li>
+		  <li>Applied SM-2 algorithm for spaced repetition in the vocabs</li>
+		</ul>
+	</description>
+  </release>
   <release version="1.1.3" date="2025-10-20">
 	<url type="details">https://bommbomm34.itch.io/latin-defense/devlog/1089084/update-113</url>
 	<description>
@@ -97,7 +122,7 @@
 	  <caption>Fight scene in Latin Defense</caption>
 	</screenshot>
 	<screenshot>
-	  <image>https://raw.githubusercontent.com/bommbomm34/latindefense/a0f1322ff6af8bac9141951eb951f7b8f32e11cb/screenshots/latin-defense-screenshot-3.png</image>
+	  <image>https://raw.githubusercontent.com/bommbomm34/latindefense/ba89fdad23a4ed8387b26801ef2eede14fe322a4/screenshots/latin-defense-screenshot-3.png</image>
 	  <caption>Vocabulary scene in Latin Defense</caption>
 	</screenshot>
   </screenshots>
