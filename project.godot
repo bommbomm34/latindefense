@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Latin Defense"
 config/description="You are the leader of your Roman Empire, but it's small. Expand your empire to get more might. Get resources, farmers, coins, soldiers and weapons to expand your empire, but keep in mind: Other empires will fight against you. You need to defend your empire! You gain rewards by learning Latin vocabs. It is a Learn-to-Progress Game!"
-config/version="0.1"
+config/version="1.2.0"
 run/main_scene="uid://d1158a2ro4m8a"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/bg_color=Color(0.0101923, 0.393325, 0.384355, 1)
