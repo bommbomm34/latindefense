@@ -16,6 +16,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5pi43")
 
+[node name="AmountLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 32.0
+offset_right = 455.0
+offset_bottom = 143.0
+theme_override_font_sizes/font_size = 81
+text = "0x"
+horizontal_alignment = 1
+
 [node name="Preview" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 152.0
@@ -39,14 +49,14 @@ icon = ExtResource("3_xim6y")
 icon_alignment = 2
 expand_icon = true
 
-[node name="AmountLabel" type="Label" parent="."]
+[node name="DamageLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 12.0
-offset_top = 16.0
-offset_right = 443.0
-offset_bottom = 127.0
-theme_override_font_sizes/font_size = 81
-text = "0x"
+offset_left = 294.0
+offset_top = 398.0
+offset_right = 459.0
+offset_bottom = 480.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
 horizontal_alignment = 1
 
 [connection signal="pressed" from="BuyButton" to="." method="_on_buy_button_pressed"]
