@@ -16,6 +16,10 @@ You can see your total life in red and your denar on the top side.
 
 You have soldiers and farmers. Soldiers and farmers have a rarity which can be *common, rare or legendary*. Better rarity means a better soldier or farmer, but those are more expensive. You pay with denar in the game. You lose denar, if you lose in a fight against a province. You win denar, if you win a fight. If it is DRAWN, then nobody wins anything. Farmers are multipliers for your rewards in fights. You can also earn (or lose) denar in Vocabs by learning vocabs. If you don't click the right translation, you lose denar. Otherwise, you win denar.
 
+Common soldiers have a strength of 20/s, rare ones 35/s and legendary ones 50/s.
+
+Common farmers give a multiplier of 0.1x, rare ones 0.3x, and legendary ones 0.5x.
+
 ## About
 
 You can see the credits and the license of the game. It is basically a richtext clone of LICENSE.txt in the source code.
@@ -41,5 +45,7 @@ Select the province, you want to fight against. You can only fight against provi
 ## Gameplay
 
 If you are in the game, you see your temporary life in the bottom left of the game. The temporary life of the enemy is in the bottom right of the game. If the temporary life gets reduced, the total life gets also reduced by the same amount. You can see your total life after the fight over the temporary life labels. During the fight, you can click to spawn soldiers in that height (it will be rounded). Sometimes, you can't because of cheat protection. The enemy spawns soldiers automatically. You can see the amount of the rarities of the remaining soldiers you have on the top left side. You can also see the amount of all remaining soldiers the enemy has on the top right side. The soldiers will fight each other if they are near to each other. If a soldier reaches the other side, the other side loses life. If your total life is under 1 after the fight, the enemy's life gets 7000 and yours also, but you lose lots of denar. On the other side, if the enemy's total life is under 1, you invaded the enemy and you get its denars and its ownership.
+
+If you win, you receive 300 denar multiplied with your multiplier. If you lose, you lose 100 denar. If you don't have 100 denar, all of your denar will be taken away.
 
 **Thanks for playing Latin Defense!**

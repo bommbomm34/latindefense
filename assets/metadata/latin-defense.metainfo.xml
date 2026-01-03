@@ -42,6 +42,17 @@
 	<p>You are the leader of your Roman Empire, but it has only one province. Expand your empire to get more might. Get farmers, denar and soldiers to expand your empire. You need to invade other provinces. You gain rewards by learning Latin vocabs.</p>
   </description>
   <releases>
+  <release version="1.2.1" date="2026-01-03">
+	<url type="details">https://bommbomm34.itch.io/latin-defense/devlog/1290732/update-121</url>
+	<description>
+		<ul>
+		  <li>Distinguish soldiers easier</li>
+		  <li>Fix automatic feedback clear in Vocabs</li>
+		  <li>Add damage label to soldiers</li>
+		  <li>Mention rewards in HELP</li>
+		</ul>
+	</description>
+  </release>
   <release version="1.2.0" date="2025-10-30">
 	<url type="details">https://bommbomm34.itch.io/latin-defense/devlog/1098411/update-120</url>
 	<description>
