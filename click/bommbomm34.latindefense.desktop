@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Latin Defense
+Comment=Expand your own Roman Empire!
+Categories=Game;StrategyGame;
+Version=1.2
+Exec=latin-defense
+Icon=assets/logo.svg
+Terminal=false
+Type=Application
+X-Lomiri-Touch=true

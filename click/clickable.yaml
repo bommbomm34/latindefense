@@ -1,0 +1,12 @@
+clickable_minimum_required: 8.0.0
+builder: precompiled
+kill: latin-defense
+install_root_data:
+- manifest.json
+- bommbomm34.latindefense.apparmor
+- bommbomm34.latindefense.desktop
+- assets
+install_bin:
+- latin-defense
+install_lib:
+- /opt/sdl/*so*
