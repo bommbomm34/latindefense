@@ -67,7 +67,7 @@ func select(option: String):
 	if not result:
 		end()
 	else:
-		clear_later()
+		$Timer.start()
 	if OS.has_feature("mobile") or OS.has_feature("web_android") or OS.has_feature("web_ios"):
 		call_deferred("release_hover_state")
 
@@ -126,10 +126,6 @@ func end():
 	$SourceWord.text = ""
 	$Feedback.text = "No vocabs left. See you later!"
 
-func clear_later():
-	await get_tree().create_timer(3.0).timeout
-	$Feedback.text = ""
-
 func release_hover_state(): # We do this to make it more pretty on touch screen devices
 	var click = InputEventMouseButton.new()
 	click.position = Vector2(1920, 1080)
@@ -143,3 +139,6 @@ func release_hover_state(): # We do this to make it more pretty on touch screen 
 func get_real_language() -> String:
 	var lang = Database.get_value("lang", "auto")
 	return lang if lang != "auto" else OS.get_locale_language() if FileAccess.file_exists("res://assets/vocabs/vocabs_" + OS.get_locale_language() + ".txt") else "en"
+
+func _on_timer_timeout() -> void:
+	$Feedback.text = ""

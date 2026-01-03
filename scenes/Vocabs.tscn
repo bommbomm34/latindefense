@@ -138,7 +138,12 @@ theme_override_colors/font_color = Color(0.2592936, 0.25929376, 0.25929365, 1)
 theme_override_font_sizes/font_size = 60
 horizontal_alignment = 2
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
 [connection signal="pressed" from="Option1" to="." method="_on_option_1_pressed"]
 [connection signal="pressed" from="Option2" to="." method="_on_option_2_pressed"]
 [connection signal="pressed" from="Option3" to="." method="_on_option_3_pressed"]
 [connection signal="pressed" from="Option4" to="." method="_on_option_4_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
