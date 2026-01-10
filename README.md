@@ -19,7 +19,7 @@ Get the latest version on [the itch.io page of the game](https://bommbomm34.itch
 
 [<img src="https://f-droid.org/badge/get-it-on.png"
     alt="Get it on F-Droid"
-    height="80">](https://f-droid.org/packages/io.github.bommbomm34.latindefense)
+    height="240">](https://f-droid.org/packages/io.github.bommbomm34.latindefense)
 
 ## Help
 
