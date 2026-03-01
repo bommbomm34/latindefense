@@ -48,6 +48,7 @@
 		<ul>
 		  <li>Determine prices of soldiers and farmers dynamically</li>
 		  <li>Add bulk buy option</li>
+		  <li>Determine vocab rewards dynamically</li>
 		</ul>
 	</description>
   </release>

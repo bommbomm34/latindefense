@@ -38,8 +38,4 @@ func reload():
 		child.reload()
 
 func get_price_multiplier() -> int:
-	var owned_provinces := 0
-	for key: String in Database.dictionary:
-		if key.ends_with("_owned"):
-			owned_provinces += 1
-	return owned_provinces
+	return Database.get_owned_provinces()

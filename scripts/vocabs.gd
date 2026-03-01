@@ -1,12 +1,13 @@
 extends Control
 
 @onready var file := FileAccess.open("res://assets/vocabs/vocabs_" + get_real_language() + ".txt", FileAccess.READ)
+@onready var multiplier := float(Database.get_owned_provinces()) * 0.5 + 0.5
+@onready var reward := int(50 * multiplier)
 var right_option: String
 var cards = []
 var review_cards = []
 var current_card = null
 var all_answers = []
-const reward = 50
 
 func _ready() -> void:
 	load_cards()
