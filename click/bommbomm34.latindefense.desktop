@@ -2,7 +2,7 @@
 Name=Latin Defense
 Comment=Expand your own Roman Empire!
 Categories=Game;StrategyGame;
-Version=1.2
+Version=1.3
 Exec=latin-defense
 Icon=assets/logo.svg
 Terminal=false
