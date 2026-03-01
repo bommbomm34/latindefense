@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=58 format=3 uid="uid://bl7glh8ic4a3a"]
+[gd_resource type="Theme" format=3 uid="uid://bl7glh8ic4a3a"]
 
 [ext_resource type="FontFile" uid="uid://dhiqxhv21uoxk" path="res://assets/font/static/Cinzel-Bold.ttf" id="1_10c53"]
 [ext_resource type="Texture2D" uid="uid://cpe7apdb86mb6" path="res://assets/theme/grabber.svg" id="2_ny3hw"]

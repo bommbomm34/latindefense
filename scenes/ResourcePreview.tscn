@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgve73osetk0y"]
+[gd_scene format=3 uid="uid://cgve73osetk0y"]
 
 [ext_resource type="Script" uid="uid://bruar1dhl6hkv" path="res://scripts/resource_preview.gd" id="1_5pi43"]
 [ext_resource type="Texture2D" uid="uid://f165lcx42het" path="res://assets/farmers/farmer_common.svg" id="2_w0wvw"]
 [ext_resource type="Texture2D" uid="uid://dved386sa5acq" path="res://assets/icons/denar.png" id="3_xim6y"]
 
-[node name="ResourcePreview" type="Control"]
+[node name="ResourcePreview" type="Control" unique_id=508463771]
 custom_minimum_size = Vector2(585, 0)
 layout_mode = 3
 anchors_preset = 15
@@ -16,7 +16,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5pi43")
 
-[node name="AmountLabel" type="Label" parent="."]
+[node name="AmountLabel" type="Label" parent="." unique_id=650098675]
 layout_mode = 0
 offset_left = 24.0
 offset_top = 32.0
@@ -26,7 +26,7 @@ theme_override_font_sizes/font_size = 81
 text = "0x"
 horizontal_alignment = 1
 
-[node name="Preview" type="TextureRect" parent="."]
+[node name="Preview" type="TextureRect" parent="." unique_id=708034852]
 layout_mode = 0
 offset_left = 152.0
 offset_top = 120.0
@@ -36,7 +36,7 @@ scale = Vector2(0.185, 0.185)
 texture = ExtResource("2_w0wvw")
 stretch_mode = 2
 
-[node name="BuyButton" type="Button" parent="."]
+[node name="BuyButton" type="Button" parent="." unique_id=2112816694]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 520.0
@@ -49,7 +49,7 @@ icon = ExtResource("3_xim6y")
 icon_alignment = 2
 expand_icon = true
 
-[node name="DamageLabel" type="Label" parent="."]
+[node name="DamageLabel" type="Label" parent="." unique_id=1486059715]
 layout_mode = 0
 offset_left = 294.0
 offset_top = 398.0
