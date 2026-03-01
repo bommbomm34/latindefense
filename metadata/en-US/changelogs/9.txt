@@ -1,0 +1,3 @@
+- Determine prices of soldiers and farmers dynamically
+- Add bulk buy option
+- Determine vocab rewards dynamically

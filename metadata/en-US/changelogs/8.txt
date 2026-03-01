@@ -1,0 +1,4 @@
+- Distinguish soldiers easier
+- Fix automatic feedback clear in Vocabs
+- Add damage label to soldiers
+- Mention rewards in HELP
