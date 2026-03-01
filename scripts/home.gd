@@ -5,6 +5,7 @@ const default_map_size := Vector2(837, 650)
 
 func _ready():
 	#Database.remove_all() # ONLY FOR DEBUGGING
+	Database.load_state() # Init database
 	set_language()
 	Database.set_default_value("soldier_common_amount", 21)
 	Database.set_default_value("soldier_rare_amount", 6)

@@ -22,7 +22,6 @@ static func add_value(key: String, value):
 	set_value(key, get_value(key, 0) + value)
 
 static func get_value(key: String, default):
-	load_state()
 	var value = dictionary.get(key)
 	if value == null:
 		set_value(key, default)

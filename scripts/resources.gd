@@ -2,15 +2,23 @@ extends Control
 
 @onready var resources_container := $ScrollContainer/ResourcesContainer
 @export_group("Farmer prices")
-@export var farmer_common_price := 100
-@export var farmer_rare_price := 300
-@export var farmer_legendary_price := 500
+@export var farmer_common_base_price := 100
+@export var farmer_rare_base_price := 300
+@export var farmer_legendary_base_price := 500
 @export_group("Soldier prices")
-@export var soldier_common_price := 500
-@export var soldier_rare_price := 1000
-@export var soldier_legendary_price := 2500
+@export var soldier_common_base_price := 200
+@export var soldier_rare_base_price := 500
+@export var soldier_legendary_base_price := 1000
 
 func _ready():
+	var price_multiplier := get_price_multiplier()
+	var farmer_common_price := farmer_common_base_price * price_multiplier
+	var farmer_rare_price := farmer_rare_base_price * price_multiplier
+	var farmer_legendary_price := farmer_legendary_base_price * price_multiplier
+	var soldier_common_price := soldier_common_base_price * price_multiplier
+	var soldier_rare_price := soldier_rare_base_price * price_multiplier
+	var soldier_legendary_price := soldier_legendary_base_price * price_multiplier
+
 	load_resources("soldiers", soldier_common_price, soldier_rare_price, soldier_legendary_price)
 	load_resources("farmers", farmer_common_price, farmer_rare_price, farmer_legendary_price)
 
@@ -26,3 +34,10 @@ func load_resources(resources_name: String, common_price: int, rare_price: int, 
 func reload():
 	for child in resources_container.get_children():
 		child.reload()
+
+func get_price_multiplier() -> int:
+	var owned_provinces := 0
+	for key: String in Database.dictionary:
+		if key.ends_with("_owned"):
+			owned_provinces += 1
+	return owned_provinces
