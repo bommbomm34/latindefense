@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bk0p561w53mif"]
+[gd_scene format=3 uid="uid://bk0p561w53mif"]
 
 [ext_resource type="Script" uid="uid://cawp20t3hauvr" path="res://scripts/resources.gd" id="1_k3dre"]
 [ext_resource type="PackedScene" uid="uid://dsckvvmxhdqcw" path="res://scenes/Base.tscn" id="2_h1vhg"]
 
-[node name="Resources" type="Control"]
+[node name="Resources" type="Control" unique_id=1809971664]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,14 +11,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_k3dre")
-soldier_common_price = 200
-soldier_rare_price = 500
-soldier_legendary_price = 1000
 
-[node name="Base" parent="." instance=ExtResource("2_h1vhg")]
+[node name="Base" parent="." unique_id=1344346631 instance=ExtResource("2_h1vhg")]
 layout_mode = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1230993394]
 clip_contents = false
 layout_mode = 1
 anchors_preset = -1
@@ -29,5 +26,5 @@ anchor_bottom = 0.9
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ResourcesContainer" type="HBoxContainer" parent="ScrollContainer"]
+[node name="ResourcesContainer" type="HBoxContainer" parent="ScrollContainer" unique_id=1756176841]
 layout_mode = 2

@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://7cvivtm8esg1"]
+[gd_scene format=3 uid="uid://7cvivtm8esg1"]
 
 [ext_resource type="Script" uid="uid://b25d5u6bhwdhd" path="res://scripts/vocabs.gd" id="1_fi8gj"]
 [ext_resource type="PackedScene" uid="uid://dsckvvmxhdqcw" path="res://scenes/Base.tscn" id="1_own8k"]
 
-[node name="Vocabs" type="Control"]
+[node name="Vocabs" type="Control" unique_id=1193209117]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,7 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fi8gj")
 
-[node name="SourceWord" type="Label" parent="."]
+[node name="SourceWord" type="Label" parent="." unique_id=759419058]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.17
@@ -24,7 +24,7 @@ theme_override_font_sizes/font_size = 120
 text = "dominus"
 horizontal_alignment = 1
 
-[node name="Feedback" type="Label" parent="."]
+[node name="Feedback" type="Label" parent="." unique_id=223588695]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.98
@@ -35,7 +35,7 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 60
 horizontal_alignment = 1
 
-[node name="Instruction" type="Label" parent="."]
+[node name="Instruction" type="Label" parent="." unique_id=1897327414]
 visible = false
 layout_mode = 1
 anchors_preset = -1
@@ -51,7 +51,7 @@ theme_override_font_sizes/font_size = 60
 text = "Click on the correct translation of the word."
 horizontal_alignment = 1
 
-[node name="Option1" type="Button" parent="."]
+[node name="Option1" type="Button" parent="." unique_id=1173047994]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.06
@@ -67,7 +67,7 @@ theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 120
 text = "landlord"
 
-[node name="Option2" type="Button" parent="."]
+[node name="Option2" type="Button" parent="." unique_id=297817952]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.94
@@ -84,7 +84,7 @@ theme_override_colors/font_focus_color = Color(1, 1, 0, 1)
 theme_override_font_sizes/font_size = 120
 text = "leader"
 
-[node name="Option3" type="Button" parent="."]
+[node name="Option3" type="Button" parent="." unique_id=1002892930]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.06
@@ -100,7 +100,7 @@ theme_override_colors/font_focus_color = Color(0, 1, 0, 1)
 theme_override_font_sizes/font_size = 120
 text = "lord"
 
-[node name="Option4" type="Button" parent="."]
+[node name="Option4" type="Button" parent="." unique_id=1474157035]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.94
@@ -117,13 +117,13 @@ theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
 theme_override_font_sizes/font_size = 120
 text = "father"
 
-[node name="Base" parent="." instance=ExtResource("1_own8k")]
+[node name="Base" parent="." unique_id=437040807 instance=ExtResource("1_own8k")]
 layout_mode = 1
 offset_right = 0.0
 offset_bottom = 0.0
 metadata/_edit_lock_ = true
 
-[node name="LeftCards" type="Label" parent="."]
+[node name="LeftCards" type="Label" parent="." unique_id=597893080]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.99
@@ -138,7 +138,7 @@ theme_override_colors/font_color = Color(0.2592936, 0.25929376, 0.25929365, 1)
 theme_override_font_sizes/font_size = 60
 horizontal_alignment = 2
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1684076493]
 wait_time = 3.0
 one_shot = true
 

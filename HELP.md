@@ -30,11 +30,11 @@ You can change your music and sound effect (SFX) volume. You can also change the
 
 ## Resources
 
-You can buy here soldiers and farmers. Rarer soldiers and farmers are more expensive than the common ones. Soldiers are more expensive than farmers. You can see the amount of rarity of soldiers and farmers you own over the related soldier or farmer.
+You can buy here soldiers and farmers. Rarer soldiers and farmers are more expensive than the common ones. Soldiers are more expensive than farmers. You can see the amount of rarity of soldiers and farmers you own over the related soldier or farmer. The prices of the soldiers and farmers are determined dynamically depending on the amount of owned provinces. You may also buy soldiers and farmers in bulk with the multiplier button under the buy button.
 
 ## Vocabs
 
-You become four options to select. The options will be in your selected language (or English, if your language is not available). You also see a latin word over the options. You need to click on the right translation. If you get it right, denar will be added, otherwise, you lose denar. You can see the feedback (RIGHT or WRONG) under the options. The game has totally 2810 vocabs. Your vocab state will be resetted, if you change the language or finish the vocabs. You can see the amount of cards you can review today at the bottom right corner. The game uses a simplified version of the SM-2 algorithm.
+You become four options to select. The options will be in your selected language (or English, if your language is not available). You also see a latin word over the options. You need to click on the right translation. If you get it right, denar will be added, otherwise, you lose denar. The amount of that denar is dynamically determined. You can see the feedback (RIGHT or WRONG) under the options. The game has totally 2810 vocabs. Your vocab state will be resetted, if you change the language or finish the vocabs. You can see the amount of cards you can review today at the bottom right corner. The game uses a simplified version of the SM-2 algorithm.
 
 **WARNING: Sometimes, your clicked option can be true, but the game can it recognize as false. This can be, because the vocabs were automatically generated. The vocabs are provided WITHOUT ANY KIND OF WARRANTY.**
 
