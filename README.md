@@ -15,6 +15,11 @@ Get the latest version on [the itch.io page of the game](https://bommbomm34.itch
   <a href="https://bommbomm34.itch.io/latin-defense">
     <img width="240" alt="Available on itch.io" src="https://static.itch.io/images/badge-color.svg"/>
   </a>
+  <a href="https://f-droid.org/packages/io.github.bommbomm34.latindefense">
+    <img src="https://f-droid.org/badge/get-it-on.png"
+    alt="Get it on F-Droid"
+    width="240">
+  </a>
 </div>
 
 ## Help
