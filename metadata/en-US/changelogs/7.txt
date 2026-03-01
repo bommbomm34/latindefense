@@ -1,0 +1,5 @@
+- Prettier map
+- Optimized map dragging (and made it smoother)
+- Optimized gameplay
+- Deleted German and Turkish vocab versions (due to too many bugs)
+- Applied SM-2 algorithm for spaced repetition in the vocabs
