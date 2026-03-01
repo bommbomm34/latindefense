@@ -10,8 +10,9 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1359.0
-offset_bottom = -408.0
+offset_left = -12.0
+offset_right = -1347.0
+offset_bottom = -350.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5pi43")
@@ -49,6 +50,34 @@ icon = ExtResource("3_xim6y")
 icon_alignment = 2
 expand_icon = true
 
+[node name="BulkBuyButton" type="OptionButton" parent="BuyButton" unique_id=766897745]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.38
+anchor_top = 1.0
+anchor_right = 0.38
+anchor_bottom = 1.0
+offset_left = -70.44
+offset_top = 43.0
+offset_right = 146.56
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 0
+selected = 0
+item_count = 6
+popup/item_0/text = "1x"
+popup/item_0/id = 0
+popup/item_1/text = "2x"
+popup/item_1/id = 1
+popup/item_2/text = "5x"
+popup/item_2/id = 2
+popup/item_3/text = "10x"
+popup/item_3/id = 3
+popup/item_4/text = "100x"
+popup/item_4/id = 4
+popup/item_5/text = "MAX"
+popup/item_5/id = 5
+
 [node name="DamageLabel" type="Label" parent="." unique_id=1486059715]
 layout_mode = 0
 offset_left = 294.0
@@ -60,3 +89,4 @@ theme_override_font_sizes/font_size = 60
 horizontal_alignment = 1
 
 [connection signal="pressed" from="BuyButton" to="." method="_on_buy_button_pressed"]
+[connection signal="item_selected" from="BuyButton/BulkBuyButton" to="." method="_on_bulk_buy_button_item_selected"]

@@ -30,7 +30,7 @@ You can change your music and sound effect (SFX) volume. You can also change the
 
 ## Resources
 
-You can buy here soldiers and farmers. Rarer soldiers and farmers are more expensive than the common ones. Soldiers are more expensive than farmers. You can see the amount of rarity of soldiers and farmers you own over the related soldier or farmer. The prices of the soldiers and farmers are determined dynamically depending on the amount of owned provinces.
+You can buy here soldiers and farmers. Rarer soldiers and farmers are more expensive than the common ones. Soldiers are more expensive than farmers. You can see the amount of rarity of soldiers and farmers you own over the related soldier or farmer. The prices of the soldiers and farmers are determined dynamically depending on the amount of owned provinces. You may also buy soldiers and farmers in bulk with the multiplier button under the buy button.
 
 ## Vocabs
 

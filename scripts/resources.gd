@@ -25,11 +25,13 @@ func _ready():
 func load_resources(resources_name: String, common_price: int, rare_price: int, legendary_price: int):
 	const rarities := ["common", "rare", "legendary"]
 	var ResourcePreview := preload("res://scenes/ResourcePreview.tscn")
-	for rarity in rarities:
+	for i in rarities.size():
+		var rarity = rarities[i]
 		var resource_path = resources_name.substr(0, resources_name.length() - 1) + "_" + rarity + ".svg"
 		var resource_preview := ResourcePreview.instantiate()
+		var price = legendary_price if i == Rarity.LEGENDARY else rare_price if i == Rarity.RARE else common_price
 		resources_container.add_child(resource_preview)
-		resource_preview.init(resource_path.split(".svg")[0], load("res://assets/" + resources_name + "/" + resource_path), common_price, rare_price, legendary_price)
+		resource_preview.init(resource_path.split(".svg")[0], load("res://assets/" + resources_name + "/" + resource_path), price)
 
 func reload():
 	for child in resources_container.get_children():

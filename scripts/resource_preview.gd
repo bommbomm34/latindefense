@@ -2,14 +2,18 @@ extends Control
 
 var rarity: int
 var resource_name: String
+var base_price: int
 var price: int
 var amount: int
 var damage: String
+var multiplier := 1
 
-func init(given_resource_name: String, resource_image: Texture2D, common_price: int, rare_price: int, legendary_price: int):
+func init(given_resource_name: String, resource_image: Texture2D, given_base_price: int):
 	resource_name = given_resource_name
 	rarity = Rarity.LEGENDARY if resource_name.contains("legendary") else Rarity.RARE if resource_name.contains("rare") else Rarity.COMMON
-	price = legendary_price if rarity == Rarity.LEGENDARY else rare_price if rarity == Rarity.RARE else common_price
+	base_price = given_base_price
+	price = base_price
+	_on_bulk_buy_button_item_selected($BuyButton/BulkBuyButton.selected)
 	set_damage()
 	$DamageLabel.text = "+" + damage
 	$Preview.texture = resource_image
@@ -21,11 +25,11 @@ func init(given_resource_name: String, resource_image: Texture2D, common_price: 
 		$BuyButton.disabled = true
 
 func reload():
-	init(resource_name, $Preview.texture, price, price, price)
+	init(resource_name, $Preview.texture, base_price)
 
 func _on_buy_button_pressed() -> void:
 	if Database.get_value("denar", 0) >= price:
-		Database.set_value(resource_name + "_amount", amount + 1)
+		Database.set_value(resource_name + "_amount", amount + multiplier)
 		Database.set_value("denar", Database.get_value("denar", 0) - price)
 		get_parent().get_parent().get_parent().reload()
 
@@ -46,3 +50,18 @@ func set_damage():
 				damage = "0.3x"
 			Rarity.LEGENDARY:
 				damage = "0.5x"
+
+func parse_bulk_multiplier(text: String) -> int:
+	if text == "MAX":
+		var current_denar = Database.get_value("denar", 0)
+		return max(1, floori(float(current_denar) / float(base_price))) # Maximum amount
+	else:
+		return int(text.split("x")[0])
+
+
+func _on_bulk_buy_button_item_selected(index: int) -> void:
+	var current_denar = Database.get_value("denar", 0)
+	multiplier = parse_bulk_multiplier($BuyButton/BulkBuyButton.get_item_text(index))
+	price = base_price * multiplier
+	$BuyButton.text = tr("Buy for ") + str(price)
+	$BuyButton.disabled = current_denar < price
