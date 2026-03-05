@@ -22,10 +22,6 @@ Get the latest version on [the itch.io page of the game](https://bommbomm34.itch
   </a>
 </div>
 
-[<img src="https://f-droid.org/badge/get-it-on.png"
-    alt="Get it on F-Droid"
-    height="240">](https://f-droid.org/packages/io.github.bommbomm34.latindefense)
-
 ## Help
 
 If you need help to play the game, please read [HELP.md](HELP.md).
