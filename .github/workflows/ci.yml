@@ -1,0 +1,118 @@
+name: Build
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        type: string
+        description: Version
+        required: true
+      version-code:
+        type: number
+        description: Version Code
+        required: true
+      
+
+env:
+  GODOT_VERSION: v4.6.1
+  EXPORT_NAME: latin-defense
+  PROJECT_PATH: .
+  GAME_VERSION: ${{ github.event.inputs.version }}
+  GAME_VERSION_CODE: ${{ github.event.inputs.version-code }}
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+        - name: Install Godot
+          run: |
+            wget -O godot.zip https://github.com/godotengine/godot/releases/download/$GODOT_VERSION-stable/Godot_v4.6.1-stable_linux.x86_64.zip
+            unzip godot.zip
+            mv ./Godot_$GODOT_VERSION-stable_linux.x86_64 godot
+        - name: Install dependencies
+          run: |
+            sudo apt-get update
+            sudo apt-get install docker.io adb git python3 pipx python3-setuptools openjdk-17-jdk android-sdk -y
+            pipx install clickable-ut
+            echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc
+        - name: Download export templates
+          run: |
+            wget -O templates.zip https://github.com/godotengine/godot/releases/download/$GODOT_VERSION-stable/Godot_$GODOT_VERSION-stable_export_templates.tpz
+            unzip templates.zip
+        - name: Build Linux
+          run: |
+            ./godot --headless --export-release "Linux Flatpak amd64" latin-defense
+        - name: Build Windows
+          run: |
+            ./godot --headless --export-release "Windows Desktop" latindefense.exe
+        - name: Build Web
+          run: |
+            mkdir web
+            ./godot --headless --export-release "Web Export" web/index.html
+            zip -r web.zip web/
+        - name: Build Android APK
+          run: |
+            ./godot --headless --export-release "Android" latindefense.apk
+        - name: Build Android AAB
+          run: |
+            ./godot --headless --export-release "Android (AAB)" latindefense.aab
+        - name: Build Ubuntu Touch
+          run: |
+            ./godot --headless --export-release "Linux Flatpak arm64" latin-defense-arm64
+            mv latin-defense-arm64 click/latin-defense
+            cd click
+            clickable build --arch=arm64
+        - name: Upload artifact
+          uses: actions/upload-artifact@v7
+          with:
+            name: latin-defense-build
+            path: |
+              ./latin-defense
+              ./latin-defense-arm64
+              ./latindefense.exe
+              ./latindefense.apk
+              ./latindefense.aab
+              ./web.zip
+              ./click/build/aarch64-linux-gnu/app/bommbomm34.latindefense_$GAME_VERSION_arm64.click
+            
+            overwrite: true
+  publish:
+      name: Publish
+      runs-on: ubuntu-latest
+      steps:
+      - name: Install dependencies
+        run: |
+          wget https://broth.itch.zone/butler/linux-amd64/LATEST/archive.zip
+          unzip archive.zip
+      - name: Download artifact
+        uses: actions/download-artifact@v8
+      - name: Prepare files
+        run: |
+          mv ./latin-defense-build/latin-defense ./latin-defense-linux-amd64
+          mv ./latin-defense-build/latin-defense-arm64 ./latin-defense-linux-arm64
+          mv ./latin-defense-build/latindefense.exe ./latindefense.exe
+          mv ./latin-defense-build/web.zip ./web.zip
+          mv ./latin-defense-build/bommbomm34.latindefense_$GAME_VERSION_arm64.click ./latindefense.click
+          mv ./latin-defense-build/latindefense.apk latindefense.apk
+          mv ./latin-defense-build/latindefense.aab latindefense.aab
+          cp latin-defense-linux-amd64 latin-defense
+          zip latin-defense.zip latin-defense
+          rm latin-defense
+      - name: Publish GitHub
+        uses: softprops/action-gh-release@v2
+        if: github.ref_type == 'tag'
+        with:
+            name: Release ${{ github.event.inputs.version }}
+            body_path: metadata/en-US/changelogs/${{ github.event.inputs.version-code }}.txt
+            make_latest: true
+            files: |
+              latin-defense-linux-amd64
+              latin-defense-linux-arm64
+              latindefense.exe
+              latindefense.apk
+      - name: Publish itch.io
+        run: |
+          ./butler push latindefense.exe bommbomm34/latin-defense:windows --userversion $GAME_VERSION
+          ./butler push latindefense.apk bommbomm34/latin-defense:android --userversion $GAME_VERSION
+          ./butler push web.zip bommbomm34/latin-defense:web --userversion $GAME_VERSION
+          ./butler push latin-defense.zip bommbomm34/latin-defense:linux --userversion $GAME_VERSION
