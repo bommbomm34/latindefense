@@ -57,6 +57,6 @@ static func get_temp_var(key: String, default):
 static func get_owned_provinces() -> int:
 	var owned_provinces := 0
 	for key: String in dictionary:
-		if key.ends_with("_owned"):
+		if key.ends_with("_owned") and dictionary.get(key):
 			owned_provinces += 1
 	return owned_provinces
