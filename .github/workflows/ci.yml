@@ -30,7 +30,7 @@ jobs:
         run: |
           wget -O godot.zip https://github.com/godotengine/godot/releases/download/$GODOT_VERSION-stable/Godot_v$GODOT_VERSION-stable_linux.x86_64.zip
           unzip godot.zip
-          mv ./Godot_$GODOT_VERSION-stable_linux.x86_64 godot
+          mv ./Godot_v$GODOT_VERSION-stable_linux.x86_64 godot
       - name: Install dependencies
         run: |
           sudo apt-get update
