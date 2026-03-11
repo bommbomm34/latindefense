@@ -1,0 +1,4 @@
+- Fix critical game reset bug (game resets on every start, sorry for that)
+- Fix huge prices bug
+- Fix background music bug
+
